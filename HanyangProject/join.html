@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>대현이 뺨때리기</title>
+    <script>
+      $("#btn").ready(function(){
+        $("#user").removeClass("user-hidden");
+        $("#user").addClass("user");
+      });
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      
+      <div id="user" class="user-hidden" >
+
+        <div onclick="div_click()" style="width: 100%;
+        height: 10%;
+        background-color: #ddd;
+        text-align: center;
+        line-height: 50px;
+        ">
+        로그인/회원가입
+        </div>
+          
+        </div>
+
+
+      <div class="header__left">
+        <a href="./index.html">
+        <img
+          src="image/youtube.jpg"
+          alt=""
+        />
+      </a>
+      </div>
+
+      <div class="header__search">
+        <form action="">
+          <input type="text" placeholder="검색" />
+          <button onclick="herf = './search.html'"><i class="material-icons">search</i></button>
+        </form>
+        <a href="search.html">서치로 이동</a>
+      </div>
+
+      <div class="header__icons">
+        <i class="material-icons">videocam</i>
+        <i class="material-icons"onclick="test()">apps</i>
+        <i class="material-icons">notifications</i>
+        <i id="btn" class="material-icons display-this">account_circle</i>
+      </div>
+    </div>
+
+    <div class="mainBody">
+
+      <div class="outBox">
+        <div class="inputBox">
+            <input type="text" id="sampleId" name="" placeholder="아이디">
+            <label for="">아이디</label>
+        </div>
+        
+        <div class="inputBox">
+          <input type="text" id="sampleId2" name="" placeholder="비밀번호">
+          <label>비밀번호</label>
+        </div>
+
+        <div class="inputBox">
+          <input type="text" id="sampleId" name="" placeholder="닉네임">
+          <label for="">닉네임</label>
+      </div>
+
+          <div class="btn-group">
+          <a href="" class="login-btn">회원가입</a>
+        </div>
+    </div>
+
+
+
+    </div>
+  </body>
+</html>
