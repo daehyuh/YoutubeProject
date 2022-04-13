@@ -327,7 +327,7 @@ h1 {
 
 
 .serch__video:hover {
-  cursor: auto;
+  cursor: pointer;
 }
 
 .search__video__image {
