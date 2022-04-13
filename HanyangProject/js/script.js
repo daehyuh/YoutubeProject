@@ -3,5 +3,9 @@ function test(){
 }
 
 function test2(){
-    document.getElementById('user').classList.toggle('userhidden');
+    if ( document.getElementById("user").classList.contains('userhidden') ){
+        document.getElementById("user").classList.replace('userhidden', 'user');
+    } else{
+        document.getElementById("user").classList.replace('user', 'userhidden');
+    }
 }
