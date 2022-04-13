@@ -12,17 +12,25 @@
 
 <body>
     <div class="header">
-        <div id="user" class="user">
-            <div onclick="div_click()" style="width: 100%;
-            height: 10%;
-            background-color: #ddd;
-            text-align: center;
-            line-height: 50px;
-            ">
-                로그인/회원가입
-        </div>
+        <div id="user" class="userhidden">
+
+            <a href="login.html">
+              <div class="user-content">
+                로그인
+              </div>
+            </a>
+            <a href="join.html">
+              <div class="user-content">
+                회원가입
+              </div>
+            </a>
+            <a href="join.html">
+              <div class="user-content">
+                마이페이지
+              </div>
+            </a>
+          </div>
           
-        </div>
         <div class="header__left">
             <a href="./index.html">
                 <img
@@ -42,9 +50,9 @@
 
         <div class="header__icons">
             <i class="material-icons">videocam</i>
-            <i class="material-icons">apps</i>
+            <i class="material-icons" onclick="test()">apps</i>
             <i class="material-icons">notifications</i>
-            <i class="material-icons display-this" onclick="test()">account_circle</i>
+            <i class="material-icons display-this">account_circle</i>
         </div>
     </div>
 
