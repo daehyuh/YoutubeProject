@@ -5,4 +5,5 @@
 > > Front-end 프론트 엔드 파일 |
 > > HanyangProject 백엔드 프론트 엔드 합친 파일 |
 
-Link: [Hanyang](https://daehyuh318.github.io/HanyangProject/HanyangProject/index.html "깃헙 페이지")
+Link: [Hanyang](https://daehyuh318.github.io/HanyangProject/HanyangProject/index.html "깃헙 페이지") |
+Link: [github](https://github.com/daehyuh318/HanyangProject "깃헙 페이지")
