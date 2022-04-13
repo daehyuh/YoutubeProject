@@ -1,4 +1,4 @@
-#Link: [Hanyang Project](https://github.com/daehyuh318/HanyangProject,"깃헙페이지")
+# Hanyang Project
 
 > 2022년도 한양공업고등학교 3학년 B 반 작품 
 > > Back-end 백 엔드 파일 |
