@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import dao.MemberDAO;
 import entity.MemberEntity;
 
@@ -18,6 +21,7 @@ import entity.MemberEntity;
 @WebServlet("/JOINUS")
 public class JOINUS extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private Logger log = LogManager.getLogger(JOINUS.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -47,6 +51,7 @@ public class JOINUS extends HttpServlet {
 		
 		try {
 			MemberDAO.MemberInsert(user_id, user_pwd, user_name);
+			log.info("[INFO] JOIN Success");
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
@@ -58,6 +63,7 @@ public class JOINUS extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 			// log4j
+			log.error("[ERROR] Join Error");
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();

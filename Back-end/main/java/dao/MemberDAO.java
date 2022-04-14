@@ -1,8 +1,12 @@
 package dao;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import entity.MemberEntity;
 
 public class MemberDAO {
+	private static Logger log = LogManager.getLogger(MemberDAO.class);
 	public static void MemberInsert(String id, String pw, String name) {
 		DBConn dbcon = new DBConn();
 		
@@ -12,9 +16,10 @@ public class MemberDAO {
 		
 		try {
 			dbcon.stmt.executeUpdate(sql);
+			log.info("[INFO] INSERT Data");
 		} catch (Exception e) {
 			e.printStackTrace();
-			// log4j
+			log.error("[ERROR] Data Not Insert");
 		}
 	}
 	
@@ -27,9 +32,10 @@ public class MemberDAO {
 		
 		try {
 			dbcon.stmt.executeQuery(sql);
+			log.info("[INFO] SELECT Data");
 		} catch (Exception e) {
 			e.printStackTrace();
-			//log4j
+			log.error("[ERROR] Data Not Select");
 		}
 		
 		return entity;
