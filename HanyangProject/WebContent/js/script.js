@@ -39,7 +39,3 @@ function check(){
 	form.submit();
 	
 }
-
-function movePage(url){
-	location.href="/" + url;
-}
