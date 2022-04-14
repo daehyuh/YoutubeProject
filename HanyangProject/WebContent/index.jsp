@@ -5,9 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="/js/script.js"></script>
 <title>Insert title here</title>
 </head>
-<body onload="movePage(jsp/index.jsp)"> <!-- 임시방편 -->
+<body onload="movePage(jsp/main.jsp)"> <!-- 임시방편 -->
 <!--<body onload="movePage(Main)"> Main 서블릿 이동 -->
 
 </body>
