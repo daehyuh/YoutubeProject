@@ -5,11 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="/js/script.js"></script>
 <title>Insert title here</title>
+<script type="text/javascript">
+function movePage(){
+	location.href = "/jsp/main.jsp"
+	//location.href = "/MAIN"; MAIN 서블릿
+}
+</script>
 </head>
-<body onload="movePage(jsp/main.jsp)"> <!-- 임시방편 -->
-<!--<body onload="movePage(Main)"> Main 서블릿 이동 -->
+<body onload="movePage()">
 
 </body>
 </html>
