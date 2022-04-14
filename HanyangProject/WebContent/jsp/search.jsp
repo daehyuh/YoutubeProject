@@ -27,7 +27,7 @@
             회원가입
           </div>
         </a>
-        <a href="/index.jsp">
+        <a href="/jsp/main.jsp">
           <div class="user-content">
             마이페이지
           </div>
@@ -36,7 +36,7 @@
       </div>
 
     <div class="header__left">
-      <a href="/index.jsp">
+      <a href="/jsp/main.jsp">
         <img src="/image/youtube.jpg" alt="" />
       </a>
     </div>

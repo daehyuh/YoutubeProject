@@ -54,11 +54,13 @@ public class LOGIN extends HttpServlet {
 		MemberEntity entity =  MemberDAO.MemberSelectById(user_id);
 		try {
 			if(entity.getMEMBER_ID().isEmpty()) {
+				log.info("[INFO] Id Not Match");
 				msgPrint(request, response, "err");
 				
 			} else {
 				if(entity.getMEMBER_PW().equals(user_pwd)) {
 					//msgPrint(request, response, "Success");
+					log.info("[INFO] Login Success");
 					HttpSession session = request.getSession();
 					session.setAttribute("LOGIN", entity);
 					
@@ -67,6 +69,7 @@ public class LOGIN extends HttpServlet {
 							.getRequestDispatcher("/JSP/Success.jsp");
 					dispatcher.forward(request, response);
 				} else { // 패스워드 틀림
+					log.info("[INFO] Password Not Match");
 					msgPrint(request, response, "err");
 				}
 			}
