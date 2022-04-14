@@ -80,6 +80,7 @@ body.dark-theme {
   cursor: pointer;
 }
 
+
 .header__search form {
   border: 1px solid var(--header__search_board);
   height: 35px;
@@ -89,7 +90,7 @@ body.dark-theme {
 }
 
 .header__search input {
-  width: 500px;
+  width: 100%;
   padding: 10px;
   margin: 0;
   border-radius: 0;
@@ -550,11 +551,40 @@ h1 {
 }
 
 /* 로그인 */
+@media (max-width: 1920px) {
+  .header__search {
+    width: 600px;
+  }
+}
 
+@media (max-width: 989) {
+  .header__search {
+    width: 400px;
+  }
+}
+
+
+@media (max-width: 669px) {
+  .header__search {
+    /* display: none; */
+    width: 200px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .show-sidebar {
+    display: inline;
+    position: fixed;
+    top: 4.4rem;
+    height: auto;
+  }
+}
 
 @media (max-width: 425px) {
   .header__search {
-    display: none;
+    width: 200px;
   }
 
   .header__icons .material-icons {
@@ -570,25 +600,6 @@ h1 {
   }
 }
 
-@media (max-width: 768px) {
-  .header__search {
-    display: none;
-  }
 
-  .sidebar {
-    display: none;
-  }
 
-  .show-sidebar {
-    display: inline;
-    position: fixed;
-    top: 4.4rem;
-    height: auto;
-  }
-}
 
-@media (max-width: 941px) {
-  .header__search input {
-    width: 300px;
-  }
-}
