@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import dao.MemberDAO;
 import entity.MemberEntity;
 
@@ -21,6 +24,7 @@ import entity.MemberEntity;
 @WebServlet("/LOGIN")
 public class LOGIN extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private Logger log = LogManager.getLogger(LOGIN.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -51,6 +55,7 @@ public class LOGIN extends HttpServlet {
 		try {
 			if(entity.getMEMBER_ID().isEmpty()) {
 				msgPrint(request, response, "err");
+				
 			} else {
 				if(entity.getMEMBER_PW().equals(user_pwd)) {
 					//msgPrint(request, response, "Success");
