@@ -12,11 +12,9 @@
 </head>
 
 <body class="white-theme">
-
   <div class="header">
 
     <div id="user" class="userhidden">
-
       <a href="login.html">
         <div class="user-content">
           로그인
@@ -25,6 +23,11 @@
       <a href="join.html">
         <div class="user-content">
           회원가입
+        </div>
+      </a>
+      <a href="upload.html">
+        <div class="user-content">
+          업로드
         </div>
       </a>
       <a href="join.html">
@@ -59,33 +62,41 @@
       <i class="material-icons display-this" onclick="test2()">account_circle</i>
     </div>
   </div>
+
   <div class="mainBody">
+    <div class="upload">
+      <h1>영상 업로드</h1>
 
-    <div class="outBox">
-      <div class="inputBox">
 
-        <form action="">
-          <input type="text" id="sampleId" name="" placeholder="아이디">
-          <label for="">아이디</label>
-      </div>
+      <form  action="">
+        <table class="upload-table">
+          <tr>
+            <td>영상 파일</td>
+            <td><input type="file" name="file" id="file" size="50"></td>
+          </tr>
 
-      <div class="inputBox">
-        <input type="text" id="sampleId2" name="" placeholder="비밀번호">
-        <label>비밀번호</label>
-      </div>
+          <tr>
+            <td>영상 이름</td>
+            <td><input type="text" name="VIDEO_NAME" id="file" size="100"></td>
+          </tr>
 
-      <div class="inputBox">
-        <input type="text" id="sampleId" name="" placeholder="닉네임">
-        <label for="">닉네임</label>
-      </div>
+          <tr>
+            <td>영상 소개</td>
+            <td>
+              <textarea name="VIDEO_INTRO" id="VIDEO_INTRO" cols="120" rows="30"></textarea>
+            </td>
+          </tr>
 
-      <div class="btn-group">
-        <input type="submit" class="login-btn" value="회원가입"></a>
-      </div>
+          <tr>
+            <td colspan="2" align="center">
+              <input type="submit">
+              <input type="reset">
+            </td>
+          </tr>
+
+        </table>
       </form>
-
     </div>
-    
   </div>
 </body>
 

@@ -9,15 +9,56 @@
   <script type="text/javascript" src="js/script.js"></script>
   <link rel="stylesheet" href="css/styles.css" />
   <title>대현이 뺨때리기</title>
-  <script>
-    $("#btn").ready(function () {
-      $("#user").removeClass("user-hidden");
-      $("#user").addClass("user");
-    });
-  </script>
 </head>
 
-<body>
+<body class="white-theme">
+
+  <div class="header">
+
+    <div id="user" class="userhidden">
+
+      <a href="login.html">
+        <div class="user-content">
+          로그인
+        </div>
+      </a>
+      <a href="join.html">
+        <div class="user-content">
+          회원가입
+        </div>
+      </a>
+      <a href="join.html">
+        <div class="user-content">
+          마이페이지
+        </div>
+      </a>
+      <a>
+        <div id="darkmode" class="user-content" onclick="test()">
+          다크모드
+        </div>
+      </a>
+
+    </div>
+
+
+    <div class="header__left">
+      <a href="./index.html">
+        <img src="image/youtube.png" alt="" />
+      </a>
+    </div>
+
+    <div class="header__search">
+      <form action="">
+        <input type="text" placeholder="검색" />
+        <button onclick="herf = './search.html'"><i class="material-icons">search</i></button>
+      </form>
+      <a href="search.html">서치로 이동</a>
+    </div>
+
+    <div class="header__icons">
+      <i class="material-icons display-this" onclick="test2()">account_circle</i>
+    </div>
+  </div>
 
   <div class="mainBody">
     <div class="outBox">

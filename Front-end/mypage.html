@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>대현이 뺨때리기</title>
+</head>
+
+<body class="white-theme">
+    <div class="header">
+
+        <div id="user" class="userhidden">
+            <a href="login.html">
+                <div class="user-content">
+                    로그인
+                </div>
+            </a>
+            <a href="join.html">
+                <div class="user-content">
+                    회원가입
+                </div>
+            </a>
+            <a href="join.html">
+                <div class="user-content">
+                    마이페이지
+                </div>
+            </a>
+            <a>
+                <div id="darkmode" class="user-content" onclick="test()">
+                    다크모드
+                </div>
+            </a>
+
+        </div>
+
+
+        <div class="header__left">
+            <a href="./index.html">
+                <img src="image/youtube.png" alt="" />
+            </a>
+        </div>
+
+        <div class="header__search">
+            <form action="">
+                <input type="text" placeholder="검색" />
+                <button onclick="herf = './search.html'"><i class="material-icons">search</i></button>
+            </form>
+            <a href="search.html">서치로 이동</a>
+        </div>
+
+        <div class="header__icons">
+            <i class="material-icons display-this" onclick="test2()">account_circle</i>
+        </div>
+    </div>
+
+
+    <h1>영상 업로드</h1>
+
+    <div style="align-items: center;">
+        <form action="">
+            <table class="mypage-table" border=1px>
+                <tr>
+                    <td>video</td>
+                    <td>videoName</td>
+                    <td>videoIntro</td>
+                    <td>videoUpdate</td>
+                    <td>videoDELETE</td>
+                </tr>
+                <tr>
+                    <td> <img src="image/Banner1.jpg" alt="" /></td>
+                    <td>대현닷컴 홍보영상입니다</td>
+                    <td>마피아42홍보영상 대현닷컴입니다 잘부탁드립니다!</td>
+                    <td><button>수정</button></td>
+                    <td><button>삭제</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
