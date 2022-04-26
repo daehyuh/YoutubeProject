@@ -68,16 +68,16 @@
       <h1>영상 업로드</h1>
 
 
-      <form  action="">
+      <form action="Video">
         <table class="upload-table">
           <tr>
             <td>영상 파일</td>
-            <td><input type="file" name="file" id="file" size="50"></td>
+            <td><input type="file" name="VIDEO_UUID" id="file" size="50"></td>
           </tr>
 
           <tr>
             <td>영상 이름</td>
-            <td><input type="text" name="VIDEO_NAME" id="file" size="100"></td>
+            <td><input type="text" name="VIDEO_NAME" id="VIDEO_NAME" size="100"></td>
           </tr>
 
           <tr>
@@ -86,7 +86,7 @@
               <textarea name="VIDEO_INTRO" id="VIDEO_INTRO" cols="120" rows="30"></textarea>
             </td>
           </tr>
-
+          <input type="hidden" name="VIDEO_OWNER" id="" value="<%=이름%>">
           <tr>
             <td colspan="2" align="center">
               <input type="submit">
