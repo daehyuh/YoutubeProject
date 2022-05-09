@@ -31,8 +31,12 @@ public class MemberDAO {
 		String sql = "SELECT * FROM YTC_MEMBER WHERE MEMBER_ID ='" + id + "'";
 		
 		try {
-			dbcon.stmt.executeQuery(sql);
-			log.info("[INFO] SELECT Data");
+			dbcon.rs = dbcon.stmt.executeQuery(sql);
+			
+			if(dbcon.rs.next()){
+				entity = new MemberEntity(dbcon.rs.getString(1), dbcon.rs.getString(2), dbcon.rs.getString(3), dbcon.rs.getString(4));
+				log.info("[INFO] SELECT Data");
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			log.error("[ERROR] Data Not Select");

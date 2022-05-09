@@ -12,6 +12,11 @@ public class MemberEntity {
 		MEMBER_PW = mEMBER_PW;
 		MEMBER_NAME = mEMBER_NAME;
 	}
+	public MemberEntity(String mEMBER_ID, String mEMBER_PW) {
+		super();
+		MEMBER_ID = mEMBER_ID;
+		MEMBER_PW = mEMBER_PW;
+	}
 	public MemberEntity() {
 		super();
 	}
