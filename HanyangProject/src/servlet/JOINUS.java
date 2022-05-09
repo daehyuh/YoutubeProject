@@ -46,8 +46,14 @@ public class JOINUS extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		String user_id = request.getParameter("user_id");
-		String user_pwd = request.getParameter("uesr_pwd");
+		String user_pwd = request.getParameter("user_pwd");
 		String user_name = request.getParameter("user_name");
+		
+		System.out.println(user_id);
+		System.out.println(user_pwd);
+		System.out.println(user_name);
+
+		
 		
 		try {
 			MemberDAO.MemberInsert(user_id, user_pwd, user_name);

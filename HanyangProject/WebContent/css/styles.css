@@ -18,7 +18,7 @@ body {
   --video-color: black;
   --video-color-2: #606060;
   --user-color: black;
-  --user-hover-background: #f0f0f0;
+  --user-hover-background: #e0e0e0;
   --user-click-background: #c6c6c6;
 
 
@@ -183,6 +183,7 @@ body.dark-theme {
 
 /* Sidebar */
 .mainBody {
+background-color: var(--side-background);
   height: calc(100vh - 70px);
   display: flex;
   overflow: hidden;
@@ -417,15 +418,8 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-/* 濡쒓렇�씤 */
 .outBox {
+  background-color: white;
   position: relative;
   margin: auto;
   padding: 20px;
@@ -582,15 +576,15 @@ h1 {
 
 /* 濡쒓렇�씤 */
 
-@media (max-width: 3000px) {
+@media (min-width: 1920px) {
   .header__search {
-    width: 600px;
+    width: 500px;
   }
 
   .search__video__image {
     cursor: pointer;
     margin-right: 16px;
-    width: 360;
+    width: 500px;
     height: 200px;
   }
 
@@ -598,13 +592,13 @@ h1 {
 
 @media (max-width: 1920px) {
   .header__search {
-    width: 600px;
+    width: 500px;
   }
 
   .search__video__image {
     cursor: pointer;
     margin-right: 16px;
-    width: 320px;
+    width: 350px;
     height: 190px;
   }
 }
@@ -613,14 +607,14 @@ h1 {
   .search__video__image {
     cursor: pointer;
     margin-right: 16px;
-    width: 280px;
+    width: 300px;
     height: 180px;
   }
 }
 
 @media (max-width: 989px) {
   .header__search {
-    width: 400px;
+    width: 200px;
   }
 
 
@@ -660,7 +654,7 @@ h1 {
 }
 
 /* �궗�슜�븞�븿 */
-@media (max-width: 425px) { 
+@media (max-width: 425px) {
   .header__search {
     width: 200px;
   }

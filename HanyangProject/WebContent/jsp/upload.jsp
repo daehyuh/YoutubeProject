@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/css/styles.css" />
 <title>대현이 뺨때리기</title>
 </head>
-<body class="">
+<body class="white-theme">
 	<div class="header">
 
 		<div id="user" class="userhidden">
@@ -50,31 +50,37 @@
 	</div>
 
 	<div class="mainBody">
-		<div class="search">
-			<div class="search__container">
-				<!-- 비디오 -->
-				<div class="serch__video">
-					<img class="search__video__image" src="/image/Banner1.jpg" alt="" />
-					<div class="">
-						<a class="channal__info__title" href="d"> <span
-							class="search__video__title"> 대현 홍보영상입니다. </span>
-						</a>
-						<div>
-							<span>조회수 {a}회 • 1시간 전</span>
-						</div>
-						<div class="channal__info">
-							<img alt="" src="/image/Banner1.jpg"> <a
-								class="channal__info__text"
-								href="https://daehyuh318.github.io/chanal/"> <span>대현</span>
-							</a>
-						</div>
+		<div class="upload">
+			<h1>영상 업로드</h1>
 
-						<div class="search__video__info">마피아42홍보영상 대현닷컴입니다 잘부탁드립니다!
-							마피아42홍보영상 대현닷컴입니다 잘부탁드립니다! 마피아42홍보영상 대현닷컴입니다 잘부탁드립니다!</div>
-					</div>
-				</div>
 
-			</div>
+			<form action="Video">
+				<table class="upload-table" border="1px soild">
+					<tr>
+						<td width="200px">영상 파일</td>
+						<td><input type="file" name="VIDEO_UUID" id="file" size="50"></td>
+					</tr>
+
+					<tr>
+						<td>영상 이름</td>
+						<td><input type="text" name="VIDEO_NAME" id="VIDEO_NAME"
+							size="100"></td>
+					</tr>
+
+					<tr>
+						<td>영상 소개</td>
+						<td><textarea name="VIDEO_INTRO" id="VIDEO_INTRO" cols="120"
+								rows="30"></textarea></td>
+					</tr>
+					<input type="hidden" name="VIDEO_OWNER" id="" value="">
+					<tr>
+						<td colspan="2" align="center"><input type="submit">
+							<input type="reset"></td>
+					</tr>
+
+				</table>
+			</form>
 		</div>
+	</div>
 </body>
 </html>

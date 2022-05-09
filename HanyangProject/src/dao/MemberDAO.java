@@ -37,7 +37,7 @@ public class MemberDAO {
 			e.printStackTrace();
 			log.error("[ERROR] Data Not Select");
 		}
-		
+
 		return entity;
 	}
 }
