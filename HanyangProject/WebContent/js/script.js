@@ -17,7 +17,7 @@ function check(){
 	var user_pwd_check = document.getElementById("user_pwd_check");
 	var user_name = document.getElementById("user_name");
 	
-	if(user_id.value == "" || user_id.value == null){
+	if(user_id.value == "" || user_id.value == null){s
 		alert("아이디를 입력하세요.");
 		user_id.focus();
 		return;
@@ -25,11 +25,11 @@ function check(){
 		alert("비밀번호를 입력하세요.");
 		user_pwd.focus();
 		return;
-	} else if (user_pwd_check.value == user_pwd || user_pwd_check == "" || user_pwd_check == null){
+	} else if (user_pwd_check.value == user_pwd || user_pwd_check.value == "" || user_pwd_check.value == null){
 		alert("비밀번호가 일치하지 않습니다.");
 		user_pwd_check.focus();
 		return;
-	} else if(user_name == "" || user_name == null){ 
+	} else if(user_name.value == "" || user_name.value == null){ 
 		alert("이름을 입력하세요.");
 		user_name.focus();
 		return;

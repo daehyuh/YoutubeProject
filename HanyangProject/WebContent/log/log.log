@@ -1,0 +1,21 @@
+2022-05-10 10:21:00,758 ERROR [http-nio-8090-exec-2] servlet.LOGIN (LOGIN.java:78) - [ERROR] NULL
+2022-05-10 10:30:17,931 INFO  [http-nio-8090-exec-6] dao.DBConn (DBConn.java:22) - [INFO] DataBase Connect
+2022-05-10 10:30:18,232 ERROR [http-nio-8090-exec-6] servlet.LOGIN (LOGIN.java:78) - [ERROR] NULL
+2022-05-10 10:40:04,152 INFO  [http-nio-8090-exec-6] dao.DBConn (DBConn.java:22) - [INFO] DataBase Connect
+2022-05-10 10:40:06,734 ERROR [http-nio-8090-exec-6] servlet.LOGIN (LOGIN.java:78) - [ERROR] NULL
+2022-05-10 10:42:41,400 INFO  [http-nio-8090-exec-4] dao.DBConn (DBConn.java:22) - [INFO] DataBase Connect
+2022-05-10 10:42:54,029 ERROR [http-nio-8090-exec-4] servlet.LOGIN (LOGIN.java:78) - [ERROR] NULL
+2022-05-10 10:44:41,496 INFO  [http-nio-8090-exec-4] dao.DBConn (DBConn.java:22) - [INFO] DataBase Connect
+2022-05-10 10:44:41,663 INFO  [http-nio-8090-exec-4] dao.MemberDAO (MemberDAO.java:19) - [INFO] INSERT Data
+2022-05-10 10:44:41,664 INFO  [http-nio-8090-exec-4] servlet.JOINUS (JOINUS.java:54) - [INFO] JOIN Success
+2022-05-10 10:44:57,798 INFO  [http-nio-8090-exec-1] dao.DBConn (DBConn.java:22) - [INFO] DataBase Connect
+2022-05-10 10:45:10,326 DEBUG [http-nio-8090-exec-1] dao.MemberDAO (MemberDAO.java:38) - ID :12PW : 12NAME : 12
+2022-05-10 10:45:17,212 INFO  [http-nio-8090-exec-1] dao.MemberDAO (MemberDAO.java:39) - [INFO] SELECT Data
+2022-05-10 10:45:18,593 INFO  [http-nio-8090-exec-1] servlet.LOGIN (LOGIN.java:64) - [INFO] Login Success
+2022-05-10 10:45:18,603 ERROR [http-nio-8090-exec-1] servlet.LOGIN (LOGIN.java:79) - [ERROR] NULL
+2022-05-10 10:46:10,490 INFO  [http-nio-8090-exec-1] dao.DBConn (DBConn.java:22) - [INFO] DataBase Connect
+2022-05-10 10:46:12,450 DEBUG [http-nio-8090-exec-1] dao.MemberDAO (MemberDAO.java:38) - ID :12PW : 12NAME : 12
+2022-05-10 10:46:12,766 INFO  [http-nio-8090-exec-1] dao.MemberDAO (MemberDAO.java:39) - [INFO] SELECT Data
+2022-05-10 10:46:13,040 INFO  [http-nio-8090-exec-1] servlet.LOGIN (LOGIN.java:64) - [INFO] Login Success
+2022-05-10 10:46:26,884 INFO  [http-nio-8090-exec-10] dao.DBConn (DBConn.java:22) - [INFO] DataBase Connect
+2022-05-10 10:46:33,242 ERROR [http-nio-8090-exec-10] servlet.LOGIN (LOGIN.java:79) - [ERROR] NULL
