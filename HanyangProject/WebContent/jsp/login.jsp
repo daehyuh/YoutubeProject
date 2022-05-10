@@ -12,28 +12,31 @@
 <link rel="stylesheet" href="/css/styles.css" />
   <title>대현이 뺨때리기</title>
 </head>
-<body>
+<body class="white-theme">
   <div class="header">
 
-    <div id="user" class="userhidden">
+		<div id="user" class="userhidden">
 
-        <a href="login.jsp">
-          <div class="user-content">
-            로그인
-          </div>
-        </a>
-        <a href="join.jsp">
-          <div class="user-content">
-            회원가입
-          </div>
-        </a>
-        <a href="main.jsp">
-          <div class="user-content">
-            마이페이지
-          </div>
-        </a>
-  
-      </div>
+			<%
+			if (session.getAttribute("LOGIN") == null) {
+			%>
+			<a href="login.jsp">
+				<div class="user-content">로그인</div>
+			</a> <a href="join.jsp">
+				<div class="user-content">회원가입</div>
+			</a>
+			<%
+			}
+			else{
+			%>
+			<a href="main.jsp">
+				<div class="user-content">마이페이지</div>
+			</a>
+			<a onclick="location.href='/LOGOUT'";>
+				<div class="user-content">로그아웃</div>
+			</a>
+			<%}%>
+		</div>
 
     <div class="header__left">
       <a href="main.jsp">
