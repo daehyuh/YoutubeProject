@@ -11,16 +11,21 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="/js/script.js"></script>
 <link rel="stylesheet" href="/css/styles.css" />
-
 <title>대현이 뺨때리기</title>
 </head>
-<body class="white-theme">
+<body class="white-theme" onload="onloadtheme()">
 	<div class="header">
 
 		<div id="user" class="userhidden">
-
+			
+			<% 
+			MemberEntity entity = (MemberEntity) session.getAttribute("LOGIN");
+			%>
+			
+			
+			
 			<%
-			if (session.getAttribute("LOGIN") == null) {
+			if (entity.getMEMBER_NAME() == null) {
 			%>
 			<a href="login.jsp">
 				<div class="user-content">로그인</div>
@@ -28,16 +33,18 @@
 				<div class="user-content">회원가입</div>
 			</a>
 			<%
-			}
-			else{
+			} else {
 			%>
-			<a href="main.jsp">
-				<div class="user-content">마이페이지</div>
-			</a>
-			<a onclick="location.href='/LOGOUT'";>
+			<a href="update.jsp">
+				<div class="user-content">회원수정</div>
+			</a> <a onclick="location.href='/LOGOUT'";>
 				<div class="user-content">로그아웃</div>
 			</a>
-			<%}%>
+			<%
+			}
+			%>
+			<div id = "themeinfo" class="user-content" onclick="test()">디자인 : 밝은테마</div>
+			
 		</div>
 
 		<div class="header__left">
@@ -46,9 +53,9 @@
 		</div>
 
 		<div class="header__search">
-			<form action="/SEARCH">
-				<input name="searchBox" type="text" placeholder="검색" />
-				<button onclick="SearchCheck()">
+			<form action="">
+				<input type="text" placeholder="검색" />
+				<button onclick="location.href='search.jsp?';">
 					<i class="material-icons">search</i>
 				</button>
 			</form>
@@ -60,6 +67,7 @@
 			<i class="material-icons display-this" onclick="test2()">account_circle</i>
 		</div>
 	</div>
+	
 	<div class="mainBody">
 		<div class="videos">
 			<div class="videos__container">
@@ -72,7 +80,7 @@
 					</div>
 					<div class="video__details">
 						<div class="author">
-							<img src="/image/Banner1.jpg" alt="" />
+							<img src="/image/id/rkdeown10.jpg" alt="" />
 						</div>
 						<div class="title">
 							<h3>대현 홍보영상입니다.</h3>
@@ -90,3 +98,4 @@
 	</div>
 </body>
 </html>
+

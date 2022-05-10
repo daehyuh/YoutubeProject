@@ -1,4 +1,3 @@
-<%@page import="entity.MemberEntity"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -29,17 +28,16 @@
 			<%
 			} else {
 			%>
-			<a href="update.jsp">
-				<div class="user-content">회원수정</div>
+			<a href="mypage.jsp">
+				<div class="user-content">마이페이지</div>
 			</a> <a onclick="location.href='/LOGOUT'";>
 				<div class="user-content">로그아웃</div>
 			</a>
 			<%
 			}
 			%>
-			<div id="themeinfo" class="user-content" onclick="test()">디자인 :
-				밝은테마</div>
-
+			<div id = "themeinfo" class="user-content" onclick="test()">디자인 : 밝은테마</div>
+			
 		</div>
 
 		<div class="header__left">
@@ -62,33 +60,26 @@
 			<i class="material-icons display-this" onclick="test2()">account_circle</i>
 		</div>
 	</div>
-
 	<div class="mainBody">
-		<div class="search">
-			<div class="search__container">
-				<!-- 비디오 -->
-				<div class="serch__video">
-					<img class="search__video__image" src="/image/Banner1.jpg" alt="" />
-					<div class="">
-						<a class="channal__info__title" href="d"> <span
-							class="search__video__title"> 대현 홍보영상입니다. </span>
-						</a>
-						<div>
-							<span>조회수 {a}회 • 1시간 전</span>
-						</div>
-						<div class="channal__info">
-							<img alt="" src="/image/Banner1.jpg"> <a
-								class="channal__info__text"
-								href="https://daehyuh318.github.io/chanal/"> <span>대현</span>
-							</a>
-						</div>
-
-						<div class="search__video__info">마피아42홍보영상 대현닷컴입니다 잘부탁드립니다!
-							마피아42홍보영상 대현닷컴입니다 잘부탁드립니다! 마피아42홍보영상 대현닷컴입니다 잘부탁드립니다!</div>
-					</div>
+		<div class="outBox">
+			<form name="form" method="post" action="/LOGIN">
+				<div class="inputBox">
+					<input type="text" id="sampleId" name="user_id" placeholder="아이디">
+					<label for="">아이디</label>
 				</div>
 
-			</div>
+				<div class="inputBox">
+					<input type="password" id="sampleId2" name="user_pwd"
+						placeholder="비밀번호"> <label>비밀번호</label>
+				</div>
+				<div class="btn-group">
+					<a href="join.jsp" class="join-btn">회원가입</a> <input type="submit"
+						class="login-btn" value="로그인">
+				</div>
+			</form>
 		</div>
+	</div>
+
+
 </body>
 </html>
