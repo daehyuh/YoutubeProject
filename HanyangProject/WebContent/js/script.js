@@ -1,12 +1,7 @@
 function test(){
-
-	if ( document.body.classList.contains('white-theme') ){
-		 document.body.classList.replace('white-theme', 'dark-theme');
-	} else{
-		document.body.classList.replace('dark-theme', 'white-theme');
-	}
-
+    document.body.classList.toggle('dark-theme');
 }
+
 function test2(){
     if ( document.getElementById("user").classList.contains('userhidden') ){
         document.getElementById("user").classList.replace('userhidden', 'user');
@@ -43,4 +38,16 @@ function check(){
 	form.action="/JOINUS";
 	form.submit();
 	
+}
+
+function SearchCheck(){
+
+    var searchBox = document.getElementById("searchBox");
+    if (searchBox == ""){
+        return;
+    }
+    form.method="post";
+    form.action="/Search?title=" + searchBox;
+    form.submit();
+
 }

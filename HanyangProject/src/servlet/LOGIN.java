@@ -24,7 +24,7 @@ import entity.MemberEntity;
 @WebServlet("/LOGIN")
 public class LOGIN extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Logger log = LogManager.getLogger(LOGIN.class);
+	private String path = this.getClass().getSimpleName();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -53,29 +53,31 @@ public class LOGIN extends HttpServlet {
 		
 		MemberEntity entity =  MemberDAO.MemberSelectById(user_id);
 		try {
-			System.out.println(entity.getMEMBER_ID());
+
 			if(entity.getMEMBER_ID().isEmpty()) {	
-				log.info("[INFO] Id Not Match");
+				Log.INFOLOG("Id Not Match", path);
 				msgPrint(request, response, "err");
 				
 			} else {
 				if(entity.getMEMBER_PW().equals(user_pwd)) {
 					//msgPrint(request, response, "Success");
-					log.info("[INFO] Login Success");
+					Log.INFOLOG("Login Succcess", path);
 					HttpSession session = request.getSession();
 					session.setAttribute("LOGIN", entity);
 					
 					ServletContext context = getServletContext();
 					RequestDispatcher dispatcher = context
-							.getRequestDispatcher("/jsp/Success.jsp");
+							.getRequestDispatcher("/jsp/main.jsp");
 					dispatcher.forward(request, response);
-				} else { // 패스워드 틀림
-					log.info("[INFO] Password Not Match");
+				} else { // 패스워드 틀림					
+					Log.INFOLOG("Password Not Match", path);
 					msgPrint(request, response, "err");
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			Log.ERRORLOG("NULL", path);
+			msgPrint(request, response, "err");
 		}
 	}
 	
@@ -84,17 +86,16 @@ public class LOGIN extends HttpServlet {
 		String msgPrint = "";
 
 		if (msg.equals("err")) {
-			msgPrint = "alert('아이디 또는 패스워드를 잘못입력하였습니다.');";
+			msgPrint = "alert('아이디 또는 패스워드를 잘못입력하였습니다.');location.href='/jsp/login.jsp';";
 		} else {
 			msgPrint = "alert('로그인 성공');";
 		}
-
+		
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("<script>");
 		out.println(msgPrint);
-		out.println("location.href='/'");
 		out.println("</script>");
 		out.close();
 	}

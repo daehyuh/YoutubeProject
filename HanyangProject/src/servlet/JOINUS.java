@@ -21,8 +21,8 @@ import entity.MemberEntity;
 @WebServlet("/JOINUS")
 public class JOINUS extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Logger log = LogManager.getLogger(JOINUS.class);
-       
+	private String path = this.getClass().getSimpleName();
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -30,7 +30,9 @@ public class JOINUS extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-
+    
+    
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -51,7 +53,7 @@ public class JOINUS extends HttpServlet {
 
 		try {
 			MemberDAO.MemberInsert(user_id, user_pwd, user_name);
-			log.info("[INFO] JOIN Success");
+			Log.INFOLOG("JOIN Success", path);
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
@@ -63,7 +65,7 @@ public class JOINUS extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 			// log4j
-			log.error("[ERROR] Join Error");
+			Log.ERRORLOG("Join Error", path);
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();

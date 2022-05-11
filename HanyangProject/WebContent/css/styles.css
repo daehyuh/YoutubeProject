@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body.white-theme{
+body {
   --background: #fff;
   --side-background: #f9f9f9;
   --top-background: #fff;
@@ -103,7 +103,7 @@ body.dark-theme {
   border: none;
   height: 100%;
   background-color: var(--header__search);
-  color: var(--h1-color);
+  color: var(searchbox-text-color);
 }
 
 .header__search button {

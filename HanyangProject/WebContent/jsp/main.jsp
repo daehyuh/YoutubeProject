@@ -1,4 +1,3 @@
-<%@page import="entity.MemberEntity"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,76 +10,69 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="/js/script.js"></script>
 <link rel="stylesheet" href="/css/styles.css" />
+
 <title>대현이 뺨때리기</title>
 </head>
-<body class="white-theme" onload="onloadtheme()">
-	<div class="header">
+<body class="">
+  <div class="header">
 
-		<div id="user" class="userhidden">
-			
-			<% 
-			MemberEntity entity = (MemberEntity) session.getAttribute("LOGIN");
-			%>
-			
-			
-			
-			<%
-			if (entity.getMEMBER_NAME() == null) {
-			%>
-			<a href="login.jsp">
-				<div class="user-content">로그인</div>
-			</a> <a href="join.jsp">
-				<div class="user-content">회원가입</div>
-			</a>
-			<%
-			} else {
-			%>
-			<a href="update.jsp">
-				<div class="user-content">회원수정</div>
-			</a> <a onclick="location.href='/LOGOUT'";>
-				<div class="user-content">로그아웃</div>
-			</a>
-			<%
-			}
-			%>
-			<div id = "themeinfo" class="user-content" onclick="test()">디자인 : 밝은테마</div>
-			
-		</div>
+    <div id="user" class="userhidden">
 
-		<div class="header__left">
-			<a href="main.jsp"> <img src="/image/youtube.jpg" alt="" />
-			</a>
-		</div>
+        <a href="login.jsp">
+          <div class="user-content">
+            로그인
+          </div>
+        </a> 
+        <a href="join.jsp">
+          <div class="user-content">
+            회원가입
+          </div>
+        </a>
+        <a href="main.jsp">
+          <div class="user-content">
+            마이페이지
+          </div>
+        </a>
+  
+      </div>
 
-		<div class="header__search">
-			<form action="">
-				<input type="text" placeholder="검색" />
-				<button onclick="location.href='search.jsp?';">
+    <div class="header__left">
+      <a href="main.jsp">
+        <img src="/image/youtube.jpg" alt="" />
+      </a>
+    </div>
+
+    <div class="header__search">
+      <form action="">
+        <input type="text" placeholder="검색" />
+        				<button onclick="SearchCheck()">
 					<i class="material-icons">search</i>
 				</button>
-			</form>
-		</div>
+      </form>
+      <a href="search.jsp">서치로 이동</a>
+    </div>
 
-		<div class="header__icons">
-			<i class="material-icons">videocam</i> <i class="material-icons"
-				onclick="test()">apps</i> <i class="material-icons">notifications</i>
-			<i class="material-icons display-this" onclick="test2()">account_circle</i>
-		</div>
-	</div>
-	
+    <div class="header__icons">
+      <i class="material-icons">videocam</i>
+      <i class="material-icons" onclick="test()">apps</i>
+      <i class="material-icons">notifications</i>
+      <i class="material-icons display-this" onclick="test2()">account_circle</i>
+    </div>
+  </div>
 	<div class="mainBody">
 		<div class="videos">
 			<div class="videos__container">
-				<%
-				for (int i = 0; i < 22; i++) {
-				%>
+			<%
+				for(int i = 0; i < 22; i++){
+					
+			%>
 				<div class="video">
 					<div class="video__thumbnail">
 						<img src="/image/Banner1.jpg" alt="" />
 					</div>
 					<div class="video__details">
 						<div class="author">
-							<img src="/image/id/rkdeown10.jpg" alt="" />
+							<img src="/image/Banner1.jpg" alt="" />
 						</div>
 						<div class="title">
 							<h3>대현 홍보영상입니다.</h3>
@@ -90,12 +82,9 @@
 					</div>
 				</div>
 
-				<%
-				}
-				%>
+			 <% }%>
 			</div>
 		</div>
 	</div>
 </body>
 </html>
-

@@ -1,0 +1,10 @@
+2022-05-10 20:26:31,819 INFO  [http-nio-8090-exec-7] dao.DBConn (DBConn.java:22) - [INFO] DataBase Connect
+2022-05-10 20:26:31,948 DEBUG [http-nio-8090-exec-7] dao.MemberDAO (MemberDAO.java:38) - [DEBUG] ID :12 PW : 12 NAME : 12
+2022-05-10 20:26:31,948 INFO  [http-nio-8090-exec-7] dao.MemberDAO (MemberDAO.java:39) - [INFO] SELECT Data
+2022-05-10 20:26:31,949 INFO  [http-nio-8090-exec-7] servlet.Log (Log.java:12) - [INFO]Login Succcess
+2022-05-10 21:00:02,278 INFO  [http-nio-8090-exec-7] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect Path : DBConn
+2022-05-10 21:00:02,462 INFO  [http-nio-8090-exec-7] servlet.Log (Log.java:52) - [DEBUG] [DEBUG] ID : 123| PW : 123| NAME : 123| DATE : null Path : MemberDAO
+2022-05-10 21:00:02,468 INFO  [http-nio-8090-exec-7] servlet.Log (Log.java:12) - [INFO] JOIN Success Path : JOINUS
+2022-05-10 21:02:08,142 INFO  [http-nio-8090-exec-4] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect| Path : DBConn
+2022-05-10 21:02:08,252 INFO  [http-nio-8090-exec-4] servlet.Log (Log.java:52) - [DEBUG] ID : qwer| PW : qwer| NAME : qwer| DATE : null| Path : MemberDAO
+2022-05-10 21:02:08,256 INFO  [http-nio-8090-exec-4] servlet.Log (Log.java:12) - [INFO] JOIN Success| Path : JOINUS

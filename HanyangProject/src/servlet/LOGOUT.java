@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/LOGOUT")
 public class LOGOUT extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    private String path = this.getClass().getSimpleName();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -33,6 +33,7 @@ public class LOGOUT extends HttpServlet {
 		session.invalidate();
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		Log.INFOLOG("LogOut", path);
 		PrintWriter out = response.getWriter();
 		out.println("<script>");
 		out.println("alert('로그아웃했습니다.');");
