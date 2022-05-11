@@ -21,22 +21,22 @@
 		<div id="user" class="userhidden">
 			
 			<% 
-			MemberEntity entity = (MemberEntity)session.getAttribute("LOGIN");
+			MemberEntity login = (MemberEntity)session.getAttribute("LOGIN");
 			%>
-			
 			
 			<%
-			if (entity == null) {
+			if (login == null) {
 			%>
-			<a href="login.jsp">
+			
+			<a href="/jsp/login.jsp">
 				<div class="user-content">로그인</div>
-			</a> <a href="join.jsp">
+			</a> <a href="/jsp/join.jsp">
 				<div class="user-content">회원가입</div>
 			</a>
 			<%
 			} else {
 			%>
-			<a href="update.jsp">
+			<a href="/jsp/update.jsp">
 				<div class="user-content">회원수정</div>
 			</a> <a onclick="location.href='/LOGOUT'";>
 				<div class="user-content">로그아웃</div>
@@ -51,19 +51,19 @@
 
 		
 		<div class="header__left">
-			<a href="main.jsp"> <img src="/image/youtube.jpg" alt="" />
+			<a href="main.jsp"> <img src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_144x144.png" alt="" />
 			</a>
 		</div>
 
 		<div class="header__search">
-			<form action="/Search" method="post">
+			<form action="/Search" method="Get">
 				<input type="text" name="title" id = "title" placeholder="검색" />
 				<button onclick="SearchCheck();">
 					<i class="material-icons">search</i>
 				</button>
 			</form>
 		</div>
-
+		
 		<div class="header__icons">
 			<i class="material-icons">videocam</i> <i class="material-icons"
 				onclick="test()">apps</i> <i class="material-icons">notifications</i>
