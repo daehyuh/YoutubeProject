@@ -29,7 +29,6 @@ function test2(){
 }
 
 
-
 function check(){
 
 	var form = document.getElementById("form")	
@@ -72,8 +71,34 @@ function SearchCheck(){
 	if (title == ""){
 		return;
 	}
-	form.method="post";
+	form.method="Get";
 	form.action="/SEARCH";
 	form.submit();
 	
 }
+
+
+function fileCheck() {
+				//input file 태그.
+				var file = document.getElementById('file');
+				//파일 경로.
+				var filePath = file.value;
+				//전체경로를 \ 나눔.
+				var filePathSplit = filePath.split('\\'); 
+				//전체경로를 \로 나눈 길이.
+				var filePathLength = filePathSplit.length;
+				//마지막 경로를 .으로 나눔.
+				var fileNameSplit = filePathSplit[filePathLength-1].split('.');
+				//파일명 : .으로 나눈 앞부분
+				var fileName = fileNameSplit[0];
+				//파일 확장자 : .으로 나눈 뒷부분
+				var fileExt = fileNameSplit[1];
+				//파일 크기
+				var fileSize = file.files[0].size;
+				
+				
+				document.getElementById("filePath").innerHTML = "파일 경로<br>" + filePath;
+				document.getElementById("fileName").innerHTML = "파일 이름<br>" + fileName;
+				document.getElementById("fileSize").innerHTML = "파일 크기<br>" + fileSize;
+			
+			}
