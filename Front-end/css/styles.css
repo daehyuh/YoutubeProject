@@ -574,7 +574,384 @@ h1 {
   text-decoration: none;
 }
 
-/* 濡쒓렇�씤 */
+/* 업로드 */
+.upload{
+  width: 1000px;
+  margin: 40px auto;
+}
+
+.upload-table{
+  font-family: "Roboto","Noto",sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--ytcp-text-primary);
+  height: var(--row-height,84px);
+  display: flex;
+
+}
+
+.video__image{
+  width: 200px;
+  height: 100px;
+}
+
+.upload-table{
+  border: 1px;
+  color: var(--video-color);
+  border-bottom: 1px solid var(--ytcp-line-divider);
+}
+
+/* 업로드 */
+
+/* 마이페이지 */
+.mypage-table img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.mypage-table img {
+  object-fit: cover;
+  height: 200px;
+  width: 300px;
+  margin-right: 10px;
+}
+/* 마이페이지 */
+/* 로그인 */
+
+.primary_video{
+  width: 100%;
+  height: auto;
+  margin-left: 35px;
+  padding: 20px 30px 0px 0px;
+}
+
+.secondary_video{
+  background-color: orange;
+  width: 30%;
+  margin: 20px 25px 0px 0px;
+}
+
+.video_stream{
+  background-color: black;
+  width: 100%;
+  height: 538px ;
+
+
+}
+
+.primary_video_info{
+  width: 100%;
+  height: 100px;
+  background-color: var(--side-background); 
+  padding: 20px 0px 8px 0px;
+
+
+}
+
+.primary_video_info_title{
+  width: 100%;
+  height: 32  px;
+  background-color: var(--side-background); 
+  color: var(--h1-color);
+}
+.primary_video_info_info{
+  display: flex;
+  height: 40px;
+  background-color: var(--side-background); 
+}
+.left_info{
+  width: 40%;
+  height: 100%;
+  background-color: var(--side-background); 
+  color: var(--h1-color);
+}
+.right_info{
+  width: 60%;
+  height: 100%;
+  background-color: var(--side-background); 
+  color: var(--h1-color);
+}
+
+.secondary_video_info{
+  border-top: 1px solid var(--h1-color);
+  border-bottom: 1px solid var(--h1-color);
+  width: 100%;
+  height: 200px;
+  background-color: var(--side-background); 
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+.secondary_video_info_img>img{
+  width: 50px;
+  height: 50px;
+  border-radius: 55px;
+}
+
+.secondary_video_info_title{
+  width: 100%;
+  height: 60px; 
+  background-color: var(--side-background); 
+  margin-bottom: 16px;
+  padding-top: 12px;
+  display: flex;
+}
+
+.secondary_video_info_img{
+  width: 5%;
+  height: 100%;
+}
+
+.secondary_video_info_owner{
+  width: 80%;
+  height: 100%;
+  background-color: var(--side-background); 
+  color: var(--h1-color);
+}
+
+.secondary_video_info_channel{
+  width: 7%;
+  height: 100%;
+  background-color: #cc0000;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 17px;
+  border: 0px;
+  border-radius: 3px;
+}
+.secondary_video_info_channel:hover{
+  background-color: crimson;
+}
+
+.secondary_video_info_channel:active{
+  font-size: 18px;
+}
+
+.secondary_video_info_intro{
+  margin-left: 65px;
+  height: 108px;
+  background-color: var(--side-background); 
+}
+.secondary_video_info_intro_context{
+  color: var(--h1-color);
+  width: 65%;
+  height: 100%;
+  background-color: var(--side-background); 
+} 
+.video_comments{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.comments_header{
+  width: 100%;
+  height: 100px;
+  background-color: var(--side-background); 
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.header_comments_info{
+  width: 100%;
+  height: 24px;
+  margin-bottom: 24px;
+  background-color: var(--side-background); 
+  display: flex;
+}
+
+.comment_count{
+  width: 100px;
+  height: 100%;
+  background-color: var(--side-background); 
+  margin-right: 40px;
+}
+
+.comment_count>span{
+  font-size: 18px;
+}
+
+.comment_sort{
+  width: 110px;
+  height: 100%;
+  background-color: var(--side-background); 
+  display: flex;
+}
+
+.sort_img{
+  width: 30px;
+  height: 100%;
+  margin-right: 8px;
+  background-color: var(--side-background); 
+}
+.sort_menu{
+  width: 72px;
+  height: 100%;
+  background-color: var(--side-background); 
+  text-align: center;
+}
+
+.comments_input{
+  width: 100%;
+  height: 52px;
+  background-color: var(--side-background); 
+  display: flex;
+}
+.input_img{
+  width: 60px;
+  height: 100%;
+}
+.input_bar{
+  width: 100%;
+  height: 25px;
+}
+.input_button{
+  height: 27px;
+  float: right;
+}
+.input_button input[type="reset"]{
+  padding: 2px 12px;
+  background-color: gray;
+}
+.input_button input[type="button"]{
+  padding: 2px 12px;
+  margin-left: 3px;
+  background-color: darkgray;
+}
+
+.comments{
+  height: auto;
+  width: 100%;
+  display: inline;
+}
+.comment_block{
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+.comments_img{
+  padding-right: 15px;
+  width: 50px;
+  min-height: 120px;
+  height: auto;
+  background-color: var(--side-background); 
+}
+.comments_img>img{
+  border-radius: 55px;
+}
+
+
+.comments_main{
+  width: 1000px;
+  min-height: 120px;
+  height: auto;
+  background-color: var(--side-background); 
+}
+.comments_blank{
+  width: 45px;
+  min-height: 120px;
+  height: auto;
+}
+.comment_writer{
+  width: 100%;
+  height: 23px;
+  background-color: var(--side-background); 
+}
+.comment_writer > span{
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+.comment_content{
+  width: 100%;
+  height: auto;
+  background-color: var(--side-background); 
+  color: var(--h1-color);
+}
+
+.comment_com>button{
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+.secondary_video_box{
+  width: 100%;
+  height: 120px;
+  background-color: #1a73e8;
+}
+.secondary_video_img{
+  width: 50%;
+  height: 100%;
+}
+.manager_page{
+  width: 100%;
+  height: auto;
+  background-color: #1a73e8;
+}
+.manager_info_box{
+  width: 100%;
+  height: 125px;
+  background-color: var(--background);
+  padding: 20px 65px 7px;
+}
+.manager_info_profile{
+  width: 100%;
+  height: 90px;
+  display: flex;
+}
+.manager_info_img{
+  width: 10%;
+  height: 100%;
+}
+.manager_info_user{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.user_info{
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+.user_titleSubscribe{
+  width: 70%;
+  height: 100%;
+  padding-top: 4px;
+  align-items: center;
+}
+.user_subscribeButton{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user_subscribeButton input[type="button"]{
+  width: 23%;
+  height: 70%;
+  margin-right: 30px;
+  background-color: #cc0000;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 17px;
+  border: 0px;
+  border-radius: 3px;
+}
+.user_subscribeButton input[type="button"]:hover{
+  background-color: crimson;
+}
+
+.user_subscribeButton input[type="button"]:active{
+  font-size: 18px;
+}
+
+/*희건이*/
 
 @media (min-width: 1920px) {
   .header__search {
