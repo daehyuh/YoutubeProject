@@ -157,6 +157,7 @@ body.dark-theme{
 
 .userhidden {
   display: none;
+  z-index: 100;
 }
 
 .user-content {
