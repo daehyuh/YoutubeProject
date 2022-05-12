@@ -75,9 +75,7 @@ body.dark-theme{
   white-space: wrap;
 }
 
-body{
-  background-color: var(--side-background);
-}
+
 
 .material-icons {
   color: var(--span-color);
@@ -155,7 +153,6 @@ body{
   max-height: 694px;
   border: 1px solid var(--video-color-2);
   border-top: none;
-  z-index: 100;
 }
 
 .userhidden {
@@ -276,6 +273,7 @@ hr {
   padding: 15px 15px;
   border-top: 1px solid var(--header__search);
   margin: 0 auto;
+  max-width: 2000px;
 }
   
   
@@ -363,7 +361,7 @@ h1 {
 }
 
 .search__container {
-  padding: 5px;
+  padding-left: 100px;
   margin: 10px auto;
   width: 90%;
   flex-direction: row;
@@ -635,13 +633,10 @@ h1 {
 }
 
 .title-title{
-position : absolute
-left: 10px;
-color: var(--)
+
 }
 .title-x{
-	position : absolute
-	left: 650px;
+
 }
 
 .fileSel{
@@ -693,7 +688,7 @@ textarea:focus {
 	margin-left: 20px;
 	width: 100%;
 	
-	background: var(--container-border-focus-color);'
+	background: var(--container-border-focus-color);
 }
 
 .uploadSubmit{
@@ -1057,7 +1052,7 @@ textarea:focus {
 
 @media (min-width: 1920px) {
   .header__search {
-    width: 800px;
+    width: 700px;
   }
 
   .search__video__image {
@@ -1071,7 +1066,7 @@ textarea:focus {
 
 @media (max-width: 1920px) {
   .header__search {
-    width: 500px;
+    width: 700px;
   }
 
   .search__video__image {
@@ -1083,6 +1078,11 @@ textarea:focus {
 }
 
 @media (max-width: 1300px) {
+	
+.header__search {
+    width: 500px;
+  }
+	
   .search__video__image {
     cursor: pointer;
     margin-right: 16px;
@@ -1106,9 +1106,52 @@ textarea:focus {
 }
 
 
+
+@media (max-width: 875px) {
+  .header__search {
+    width: 300px;
+  }
+
+  .header__icons .material-icons {
+    display: none;
+  }
+
+  .header__icons .display-this {
+    display: inline;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .show-sidebar {
+    display: inline;
+    position: fixed;
+    top: 4.4rem;
+    height: auto;
+  }
+
+  .search__video__image {
+    cursor: pointer;
+    margin-right: 16px;
+    width: 200px;
+    height: 160px;
+  }
+
+}
+
+
 @media (max-width: 669px) {
   .header__search {
     width: 300px;
+  }
+
+  .header__icons .material-icons {
+    display: none;
+  }
+
+  .header__icons .display-this {
+    display: inline;
   }
 
   .sidebar {

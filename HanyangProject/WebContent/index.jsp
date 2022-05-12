@@ -8,11 +8,11 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 function movePage(){
-	location.href = "/jsp/main.jsp"
+	location.href = "/Main"
 	//location.href = "/MAIN"; MAIN 서블릿
 }
 </script>
-</head>
+</head>	
 <body onload="movePage()">
 
 </body>
