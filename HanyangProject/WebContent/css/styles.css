@@ -75,7 +75,9 @@ body.dark-theme{
   white-space: wrap;
 }
 
-
+body{
+  background-color: var(--side-background);
+}
 
 .material-icons {
   color: var(--span-color);
