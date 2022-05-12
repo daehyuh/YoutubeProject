@@ -31,7 +31,7 @@ function check(){
 		alert("비밀번호를 입력하세요.");
 		user_pwd.focus();
 		return;
-	} else if (user_pwd_check.value == user_pwd || user_pwd_check.value == "" || user_pwd_check.value == null){
+	} else if (user_pwd_check.value != user_pwd || user_pwd_check.value == "" || user_pwd_check.value == null){
 		alert("비밀번호가 일치하지 않습니다.");
 		user_pwd_check.focus();
 		return;
