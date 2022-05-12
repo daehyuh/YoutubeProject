@@ -153,11 +153,11 @@ body.dark-theme{
   max-height: 694px;
   border: 1px solid var(--video-color-2);
   border-top: none;
+  z-index: 100;
 }
 
 .userhidden {
   display: none;
-  z-index: 100;
 }
 
 .user-content {
