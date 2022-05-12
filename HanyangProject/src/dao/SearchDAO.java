@@ -12,25 +12,25 @@ public class SearchDAO {
 		List<SearchEntity> list = new ArrayList<SearchEntity>();
 		DBConn dbcon = new DBConn();
 		
-		String sql = "SELECT" +
-						"M.MEMBER_ID," + 
-						"M.MEMBER_NAME," + 
-						"V.VIDEO_NAME," +
-						"V.VIDEO_VIEWS," +
-						"V.VIDEO_INTRO," +
-						"V.VIDEO_DATE" +
-					"FROM" +
-						"YTC_MEMBER M" +
-					"INNER JOIN" +
-						"YTC_VIDEO V" + 
-					"ON" + 
-						"M.MEMBER_ID" +
-						"=" + 
-						"V.VIDEO_OWNER" +
-					"WHERE" + 
-						"V.VIDEO_NAME" + 
-					"LIKE" + 
-						"'%"+title+"%'";
+		String sql = "SELECT " +
+                "M.MEMBER_ID, " + 
+                "M.MEMBER_NAME, " + 
+                "V.VIDEO_NAME, " +
+                "V.VIDEO_VIEWS, " +
+                "V.VIDEO_INTRO, " +
+                "V.VIDEO_DATE " +
+            "FROM " +
+                "YTC_MEMBER M " +
+            "INNER JOIN " +
+                "YTC_VIDEO V " + 
+            "ON " + 
+                "M.MEMBER_ID " +
+                "= " + 
+                "V.VIDEO_OWNER " +
+            "WHERE " + 
+                "V.VIDEO_NAME " + 
+            "LIKE " + 
+                "'%"+title+"%'";
 		
 		
 		try {

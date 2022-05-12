@@ -7,7 +7,7 @@ import servlet.Log;
 import entity.MainEntity;
 
 public class MainPageDAO {
-	public static List<MainEntity> MainPageAllSelect(String title) {
+	public static List<MainEntity> MainPageAllSelect() {
 		List<MainEntity> list = new ArrayList<MainEntity>();
 		DBConn dbcon = new DBConn();
 		

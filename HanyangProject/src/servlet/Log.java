@@ -1,56 +1,67 @@
 package servlet;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-/**
- * Servlet implementation class log
- */
-@WebServlet("/log")
-public class log extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	private Logger logger = LogManager.getLogger(log.class);
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public log() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+public class Log {
+	private static Logger logger = LogManager.getLogger(Log.class);
+	
+	public static void INFOLOG(String text, String path){
+		
+		if(!text.isEmpty()){
+			logger.info("[INFO] " + text + "| Path : " + path);
+		} else {
+			logger.error("[ERROR] No Text | Path : " + path);
+		}
+		
+	}
+	
+	public static void WARMLOG(String text, String path){
+			
+			if(!text.isEmpty()){
+				logger.info("[WARM] " + text + "| Path : " + path);
+			} else {
+				logger.error("[ERROR] No Text | Path : " + path);
+			}
+			
+		}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		logger.error("error message");
-		logger.warn("warn message");
-		logger.info("info message");
-		logger.error("error message");
-		logger.trace("trace message");
+	public static void ERRORLOG(String text, String path){
+		
+		if(!text.isEmpty()){
+			logger.info("[ERROR] " + text + "| Path : " + path);
+		} else {
+			logger.error("[ERROR] No Text | Path : " + path);
+		}
+		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		logger.error("error message");
-		logger.warn("warn message");
-		logger.info("info message");
-		logger.error("error message");
-		logger.trace("trace message");
+	public static void FATALLOG(String text, String path){
+		
+		if(!text.isEmpty()){
+			logger.info("[FATAL] " + text + "| Path : " + path);
+		} else {
+			logger.error("[ERROR] No Text | Path : " + path);
+		}
+		
 	}
 
-}
+	public static void DEBUGLOG(String text, String path){
+		
+		if(!text.isEmpty()){
+			logger.info("[DEBUG] " + text + "| Path : " + path);
+		} else {
+			logger.error("[ERROR] No Text | Path : " + path);
+		}
+		
+	}
+
+	public static void TRACELOG(String text, String path) {
+		if(!text.isEmpty()){
+			logger.trace("[TRACE] " + text + " Path : " + path);
+		} else {
+			logger.error("[ERROR] No Text | Path : " + path);
+		}
+		
+	}
+} 

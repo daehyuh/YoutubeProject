@@ -12,20 +12,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.SearchDAO;
-import entity.SearchEntity;
+import dao.MainPageDAO;
+import entity.MainEntity;
 
 /**
  * Servlet implementation class Search
  */
-@WebServlet("/Search")
-public class Search extends HttpServlet {
+@WebServlet("/Main")
+public class Main extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     String path = this.getClass().getSimpleName();
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Search() {
+    public Main() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,18 +34,14 @@ public class Search extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String title = request.getParameter("title");
-		Log.DEBUGLOG("title : " + title, path);
-		List<SearchEntity> searchlist = new ArrayList<SearchEntity>();
+
+		List<MainEntity> Mainlist = new ArrayList<MainEntity>();
+		Mainlist = MainPageDAO.MainPageAllSelect();
 		
-		searchlist = SearchDAO.Search(title);
-		
-		request.setAttribute("searchlist", searchlist);
-		
-		Log.INFOLOG("Search Servlet", title);
-		
+		request.setAttribute("Main", Mainlist);
+
 		ServletContext context = getServletContext();
-		RequestDispatcher dispatcher = context.getRequestDispatcher("/jsp/search.jsp");
+		RequestDispatcher dispatcher = context.getRequestDispatcher("/jsp/main.jsp");
 		dispatcher.forward(request, response);
 		
 	}
