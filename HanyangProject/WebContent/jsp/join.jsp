@@ -53,7 +53,7 @@
 
 		
 		<div class="header__left">
-			<a href="main.jsp"> <img src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_144x144.png" alt="" />
+			<a href="/jsp/main.jsp"> <img src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_144x144.png" alt="" />
 			</a>
 		</div>
 
@@ -78,6 +78,10 @@
 	<div class="mainBody">
 		<div class="outBox">
 			<form id="form">
+							<div class="inputBox">
+					<h1>회원가입</h1>
+
+				</div>
 				<div class="inputBox">
 					<input type="text" id="user_id" name="user_id" placeholder="아이디">
 					<label for="">아이디</label>

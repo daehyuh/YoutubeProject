@@ -29,15 +29,15 @@
 			<%
 				if (login == null) {
 			%>
-			<a href="login.jsp">
+			<a href="/jsp/login.jsp">
 				<div class="user-content">로그인</div>
-			</a> <a href="join.jsp">
+			</a> <a href="/jsp/join.jsp">
 				<div class="user-content">회원가입</div>
 			</a>
 			<%
 				} else {
 			%>
-			<a href="update.jsp">
+			<a href="/jsp/update.jsp">
 				<div class="user-content">회원수정</div>
 			</a> <a onclick="location.href='/LOGOUT'";>
 				<div class="user-content">로그아웃</div>
@@ -53,7 +53,7 @@
 
 
 		<div class="header__left">
-			<a href="main.jsp"> <img
+			<a href="/jsp/main.jsp"> <img
 				src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_144x144.png"
 				alt="" />
 			</a>
@@ -103,7 +103,10 @@
 
 						<input type="file" name="file" id="file" / accept=".mp4"
 							onchange="fileCheck()">
-
+						
+						<input type="file" name="file2" id="file2" / accept=".png"
+							onchange="fileCheck2()">
+						
 						<div class="file_name">
 							<div>제목</div>
 							<textarea rows="" cols=""></textarea>
@@ -121,16 +124,29 @@
 					<div class="uploadInfo">
 
 						<div id="filePath">
-							파일 경로<br>
+							영상 파일 경로<br>
 						</div>
 
 						<div id="fileName">
-							파일 이름<br>
+							영상 파일 이름<br>
 						</div>
 
 						<div id="fileSize">
-							파일 크기<br>
+							영상 파일 크기<br>
 						</div>
+						
+						<div id="filePath2">
+							썸네일 파일 경로<br>
+						</div>
+
+						<div id="fileName2">
+							썸네일 파일 이름<br>
+						</div>
+
+						<div id="fileSize2">
+							썸네일 파일 크기<br>
+						</div>
+						
 					</div>
 
 				</div>

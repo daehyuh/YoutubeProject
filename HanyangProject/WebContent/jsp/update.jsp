@@ -16,17 +16,17 @@
 <title>대현이 뺨때리기</title>
 </head>
 <body class="white-theme" onload="onloadtheme()">
-<!-- 헤더 바 -->
+	<!-- 헤더 바 -->
 	<div class="header">
-	
+
 		<!-- user 바 -->
 		<div id="user" class="userhidden">
-			
-			<% 
-			MemberEntity login = (MemberEntity)session.getAttribute("LOGIN");
+
+			<%
+			MemberEntity login = (MemberEntity) session.getAttribute("LOGIN");
 			%>
-			
-			
+
+
 			<%
 			if (login == null) {
 			%>
@@ -46,50 +46,64 @@
 			<%
 			}
 			%>
-			<div id = "themeinfo" class="user-content" onclick="test()">디자인 : 밝은테마</div>
-			
+			<div id="themeinfo" class="user-content" onclick="test()">디자인 :
+				밝은테마</div>
+
 		</div>
 		<!-- user 바 -->
 
-		
+
 		<div class="header__left">
-			<a href="main.jsp"> <img src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_144x144.png" alt="" />
+			<a href="/jsp/main.jsp"> <img
+				src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_144x144.png"
+				alt="" />
 			</a>
 		</div>
 
 		<div class="header__search">
 			<form action="/Search" method="Get">
-				<input type="text" name="title" id = "title" placeholder="검색" />
+				<input type="text" name="title" id="title" placeholder="검색" />
 				<button onclick="SearchCheck();">
 					<i class="material-icons">search</i>
 				</button>
 			</form>
 		</div>
-		
+
 		<div class="header__icons">
 			<i class="material-icons">videocam</i> <i class="material-icons"
 				onclick="test()">apps</i> <i class="material-icons">notifications</i>
 			<i class="material-icons display-this" onclick="test2()">account_circle</i>
 		</div>
 	</div>
-<!-- 헤더 바 -->
-	
-	
+	<!-- 헤더 바 -->
+
+
 	<div class="mainBody">
 		<div class="outBox">
 			<form name="form" method="post" action="/LOGIN">
 				<div class="inputBox">
-					<input type="text" id="sampleId" name="user_id" placeholder="아이디">
-					<label for="">아이디</label>
+					<h1>회원 정보 수정</h1>
+
+				</div>
+				
+				<div class="inputBox">
+					<input type="text" id="sampleId" name="user_id" placeholder="아이디"
+						value="<%=request.getParameter("member_id")%>" readonly="readonly">
+
 				</div>
 
 				<div class="inputBox">
-					<input type="password" id="sampleId2" name="user_pwd"
+					<input type="text" id="sampleId2" name="user_pwd"
 						placeholder="비밀번호"> <label>비밀번호</label>
 				</div>
+
+				<div class="inputBox">
+					<input type="text" id="sampleId3" name="user_pwd"
+						placeholder="비밀번호"> <label>이름</label>
+				</div>
+
 				<div class="btn-group">
-					<a href="join.jsp" class="join-btn">회원가입</a> <input type="submit"
-						class="login-btn" value="로그인">
+					<input type="submit" class="login-btn" value="수정">
 				</div>
 			</form>
 		</div>
