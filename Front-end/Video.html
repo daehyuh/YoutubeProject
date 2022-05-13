@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
   <title>대현이 뺨때리기</title>
 </head>
 
@@ -15,23 +17,23 @@
 
     <div id="user" class="userhidden">
 
-        <a href="login.jsp">
-          <div class="user-content">
-            로그인
-          </div>
-        </a> 
-        <a href="join.jsp">
-          <div class="user-content">
-            회원가입
-          </div>
-        </a>
-        <a href="main.jsp">
-          <div class="user-content">
-            마이페이지
-          </div>
-        </a>
-  
-      </div>
+      <a href="login.jsp">
+        <div class="user-content">
+          로그인
+        </div>
+      </a>
+      <a href="join.jsp">
+        <div class="user-content">
+          회원가입
+        </div>
+      </a>
+      <a href="main.jsp">
+        <div class="user-content">
+          마이페이지
+        </div>
+      </a>
+
+    </div>
 
     <div class="header__left">
       <a href="main.jsp">
@@ -42,9 +44,9 @@
     <div class="header__search">
       <form action="">
         <input type="text" placeholder="검색" />
-        				<button onclick="location.href='search.jsp?';">
-					<i class="material-icons">search</i>
-				</button>
+        <button onclick="location.href='search.jsp?';">
+          <i class="material-icons">search</i>
+        </button>
       </form>
       <a href="search.jsp">서치로 이동</a>
     </div>
@@ -57,116 +59,116 @@
     </div>
   </div>
 
-    <div style="display: flex;">
-      <div class="primary_video">
-        <div class="video_stream">
-          <video controls width="100%" height="100%">
+  <div style="display: flex;">
+    <div class="primary_video">
+      <div class="video_stream">
+        <video controls width="100%" height="100%">
           <source src="/test.mp4" type="video/mp4">
-          </video>
+        </video>
+      </div>
+      <div class="primary_video_info">
+        <div class="primary_video_info_title">
+          제목
         </div>
-        <div class="primary_video_info">
-          <div class="primary_video_info_title">
-            제목
-          </div>
-          <div class="primary_video_info_info">
-            <div class="left_info">조회수 0회 . 2022.04.03</div>
-            <div class="right_info"></div>
-
-          </div>
+        <div class="primary_video_info_info">
+          <div class="left_info">조회수 0회 . 2022.04.03</div>
+          <div class="right_info"></div>
 
         </div>
 
-        <div class="secondary_video_info">
+      </div>
 
-          <div class="secondary_video_info_title">
+      <div class="secondary_video_info">
 
-            <div class="secondary_video_info_img">
-              <img src="image\Banner1.jpg" width="70px" height="40px">
-            </div>
+        <div class="secondary_video_info_title">
 
-            <div class="secondary_video_info_owner">
-              채널이름
-            </div>
-
-            <button class="secondary_video_info_channel" onclick="location.href='channel.html'">채널</button>
-
+          <div class="secondary_video_info_img">
+            <img src="image\Banner1.jpg" width="70px" height="40px">
           </div>
 
-          <div class="secondary_video_info_intro">
+          <div class="secondary_video_info_owner">
+            채널이름
+          </div>
 
-            <div class="secondary_video_info_intro_context">
-              위닝 마스터리그 모두보기 : http/sawadwdqweqwdas <br>
-              다른 영상 목록보기 : http/sawadwdqweqwdasqweqwes
-            </div>
+          <button class="secondary_video_info_channel" onclick="location.href='channel.html'">채널</button>
 
+        </div>
+
+        <div class="secondary_video_info_intro">
+
+          <div class="secondary_video_info_intro_context">
+            위닝 마스터리그 모두보기 : http/sawadwdqweqwdas <br>
+            다른 영상 목록보기 : http/sawadwdqweqwdasqweqwes
           </div>
 
         </div>
 
-        <div class="video_comments">
+      </div>
 
-          <div class="comments_header">
+      <div class="video_comments">
 
-            <div class="header_comments_info">
-              <div class="comment_count">
-                <span>댓글</span>
-                <span>3</span>
-                <span>개</span>
-              </div>
+        <div class="comments_header">
 
-              <div class="comment_sort">
+          <div class="header_comments_info">
+            <div class="comment_count">
+              <span>댓글</span>
+              <span>3</span>
+              <span>개</span>
+            </div>
 
-                <div class="sort_img">
+            <div class="comment_sort">
 
-                </div>
+              <div class="sort_img">
 
               </div>
 
             </div>
 
-            <div class="comments_input">
-
-              <div class="input_img">
-                <img src="/image/youtube.jpg" width="40px" height="40px">
-              </div>
-
-              <div class="input_bar">
-
-                <input type="text" placeholder="댓글 추가..." class="input_bar" id="input_comments" name="input_comments" style="height: 35px;">
-
-                <div class="input_button">
-                  <input type="reset" value="취소">
-                  <input type="button" value="댓글" onclick="">
-                </div>
-
-              </div>
-
-            </div>
           </div>
 
-          <div class="comments">
+          <div class="comments_input">
 
-            <div class="comment_block">
+            <div class="input_img">
+              <img src="/image/youtube.jpg" width="40px" height="40px">
+            </div>
 
-              <div class="comments_img">
-                <img src="image/다리우스.jpg" width="45px" height="50px">
+            <div class="input_bar">
+
+              <input type="text" placeholder="댓글 추가..." class="input_bar" id="input_comments" name="input_comments"
+                style="height: 35px;">
+
+              <div class="input_button">
+                <input type="reset" value="취소">
+                <input type="button" value="댓글" onclick="commentAdd()">
               </div>
-              <div class="comments_main">
 
-                <div class="comment_writer">
-                  <span>이름</span>
-                  <span>작성날짜</span>
-                </div>
+            </div>
 
-                <div class="comment_content">
-                  글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용
-                </div>
-                <div class="comment_com">
-                  <button onclick="hidden_comment()">답글</button>
+          </div>
+        </div>
 
-                  <div id="hidden_comment" style="display: none;">
+        <div class="comments">
+
+          <div class="comment_block">
+
+            <div class="comments_img">
+              <img src="image/다리우스.jpg" width="45px" height="50px">
+            </div>
+            <div class="comments_main">
+
+              <div class="comment_writer">
+                <span>이름</span>
+                <span>작성날짜</span>
+              </div>
+
+              <div class="comment_content">
+                글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용
+              </div>
+              <div class="comment_com">
+                <div class="hidden_comment" id="hidden_comment" name="hidden_comment">
                   <div class="input_bar">
-                    <input type="text" placeholder="대댓글 추가..." class="input_bar" id="input_comments" name="input_comments" style="height: 35px;">
+                    <input type="text" class="input_bar" id="input_comments" placeholder="대댓글 추가..."
+                      name="input_comments" style="height: 35px;">
                     <div class="input_button">
                       <input type="reset" value="취소">
                       <input type="button" value="댓글" onclick="">
@@ -174,70 +176,90 @@
                   </div>
                 </div>
               </div>
-              </div>
+            </div>
 
-              <div class="comments_blank">
+            <div class="comments_blank">
 
             </div>
 
+          </div>
+
+          <div class="comment_block">
+
+            <div class="comments_img">
+              <img src="image/다리우스.jpg" width="45px" height="50px">
             </div>
-            <div class="comment_block">
+            <div class="comments_main">
 
-              <div class="comments_img">
-                <img src="image/다리우스.jpg" width="45px" height="50px">
-              </div>
-              <div class="comments_main">
-
-                <div class="comment_writer">
-                  <span>이름</span>
-                  <span>작성날짜</span>
-                </div>
-
-                <div class="comment_content">
-                  글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용
-                </div>
-                <div class="comment_com">
-                  
-                </div>
-
+              <div class="comment_writer">
+                <span>이름</span>
+                <span>작성날짜</span>
               </div>
 
-              <div class="comments_blank">
-
+              <div class="comment_content">
+                글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용
+              </div>
+              <div class="comment_com">
+                <div class="hidden_comment" id="hidden_comment" name="hidden_comment">
+                  <div class="input_bar">
+                    <input type="text" placeholder="대댓글 추가..." class="input_bar" id="input_comments"
+                      name="input_comments" style="height: 35px;">
+                    <div class="input_button">
+                      <input type="reset" value="취소">
+                      <input type="button" value="댓글" onclick="">
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </div>
-            <div class="comment_block">
 
-              <div class="comments_img">
-                <img src="image/다리우스.jpg" width="45px" height="50px">
-              </div>
-              <div class="comments_main">
+            <div class="comments_blank">
 
-                <div class="comment_writer">
-                  <span>이름</span>
-                  <span>작성날짜</span>
-                </div>
+            </div>
 
-                <div class="comment_content">
-                  글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용
-                </div>
-                <div class="comment_com">
+          </div>
+          <div class="comment_block">
 
-                </div>
+            <div class="comments_img">
+              <img src="image/다리우스.jpg" width="45px" height="50px">
+            </div>
+            <div class="comments_main">
+
+              <div class="comment_writer">
+                <span>이름</span>
+                <span>작성날짜</span>
               </div>
 
-              <div class="comments_blank">
-
+              <div class="comment_content">
+                글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용글 내용
               </div>
+              <div class="comment_com">
+                <div class="hidden_comment" id="hidden_comment" name="hidden_comment">
+                  <div class="input_bar">
+                    <input type="text" placeholder="대댓글 추가..." class="input_bar" id="input_comments"
+                      name="input_comments" style="height: 35px;">
+                    <div class="input_button">
+                      <input type="reset" value="취소">
+                      <input type="button" value="댓글" onclick="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comments_blank">
 
             </div>
 
           </div>
 
         </div>
+
       </div>
-      
     </div>
+
+  </div>
 </body>
+
 </html>
