@@ -11,9 +11,9 @@ public class MainPageDAO {
 		List<MainEntity> list = new ArrayList<MainEntity>();
 		DBConn dbcon = new DBConn();
 		
-		String sql = "SELECT V.VIDEO_UUID, V.VIDEO_DIR, M.MEMBER_NAME, V.VIDEO_NAME, V.VIDEO_VIEWS, V.VIDEO_DATE FROM YTC_MEMBER M INNER JOIN YTC_VIDEO V ON M.MEMBER_ID = V.VIDEO_OWNER";
+		String sql = "SELECT V.VIDEO_UUID, V.VIDEO_DIR, M.MEMBER_NAME, V.VIDEO_NAME, V.VIDEO_VIEWS, V.VIDEO_DATE, M.member_id FROM YTC_MEMBER M INNER JOIN YTC_VIDEO V ON M.MEMBER_ID = V.VIDEO_OWNER";
 		
-		
+		System.out.println(sql);
 		try {
 			dbcon.rs = dbcon.stmt.executeQuery(sql);
 			Log.TRACELOG("SELECT MainPageAll Data", "MainPageDAO");
@@ -25,7 +25,8 @@ public class MainPageDAO {
 						dbcon.rs.getString(3),
 						dbcon.rs.getString(4),
 						dbcon.rs.getInt(5), 
-						dbcon.rs.getString(6)
+						dbcon.rs.getString(6),
+						dbcon.rs.getString(7)
 						);
 				Log.DEBUGLOG("V_UUID : " 
 						+ entity.getVIDEO_UUID() + " | V_DIR : "
@@ -34,7 +35,8 @@ public class MainPageDAO {
 						+ entity.getVIDEO_NAME() + " | V_NAME : " 
 						+ entity.getVIDEO_NAME() + " | V_VIEWS : " 
 						+ entity.getVIDEO_VIEWS() + " | V_DATE : " 
-						+ entity.getVIDEO_DATE(), "MainPageDAO");
+						+ entity.getVIDEO_DATE() + " | M_ID : " 
+								+ entity.getMEMBER_ID(), "MainPageDAO");
 				list.add(entity);
 			}
 		} catch (Exception e){

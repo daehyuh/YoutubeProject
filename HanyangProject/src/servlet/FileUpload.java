@@ -23,7 +23,7 @@ import dao.MemberDAO;
  */
 @WebServlet("/FileUpload")
 @MultipartConfig(maxFileSize = 1024 * 1024 * 12, 
-	location = "E:/School/HanyangProject/HanyangProject/WebContent/temp", 
+	location = "/usr/lib/download/tomcat8/webapps/ROOT/temp", 
 	fileSizeThreshold = 1024 * 1024 * 512)
 public class FileUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -57,19 +57,16 @@ public class FileUpload extends HttpServlet {
 		String name = request.getParameter("video_name");
 		String intro = request.getParameter("video_intro");
 		
-		/*owner = "1212";
-		name = "테스트1";
-		intro = "테스트1";*/
 		
 		
 		
-		String dir = "E:/School/HanyangProject/HanyangProject/WebContent/video/";
+		String dir = "/usr/lib/download/tomcat8/webapps/ROOT/file/";
 		String uniqueFileName = UUID.randomUUID().toString().replace("-", "");
 		try {
 			part.write(dir + uniqueFileName+".mp4");
-			//part2.write(dir + uniqueFileName+".png");
+			part2.write(dir + uniqueFileName+".png");
 			System.out.println(dir + uniqueFileName+".mp4");
-			//System.out.println(dir + uniqueFileName+".png");
+			System.out.println(dir + uniqueFileName+".png");
 			
 			FileDAO.UploadFile(uniqueFileName, owner, dir, name, intro);
 			

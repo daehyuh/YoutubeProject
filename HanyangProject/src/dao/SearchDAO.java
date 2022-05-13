@@ -18,8 +18,8 @@ public class SearchDAO {
                 "V.VIDEO_NAME, " +
                 "V.VIDEO_VIEWS, " +
                 "V.VIDEO_INTRO, " +
-                "V.VIDEO_DATE " +
-		"V.VIDEO_UUID " +
+                "V.VIDEO_DATE, " +
+		"V.VIDEO_UUID, " +
 		"V.VIDEO_DIR " +
             "FROM " +
                 "YTC_MEMBER M " +

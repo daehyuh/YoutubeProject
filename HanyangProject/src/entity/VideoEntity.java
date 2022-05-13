@@ -8,14 +8,23 @@ public class VideoEntity {
 	String VIDEO_DATE;
 	int VIDEO_VIEWS;
 	String VIDEO_INTRO;
+	String MEMBER_NAME;
 	
+	public String getMEMBER_NAME() {
+		return MEMBER_NAME;
+	}
+
+	public void setMEMBER_NAME(String mEMBER_NAME) {
+		MEMBER_NAME = mEMBER_NAME;
+	}
+
 	public VideoEntity() {
 		super();
 	}
 	
 	public VideoEntity(String vIDEO_UUID, String vIDEO_OWNER, String vIDEO_DIR,
 			String vIDEO_NAME, String vIDEO_DATE, int vIDEO_VIEWS,
-			String vIDEO_INTRO) {
+			String vIDEO_INTRO, String mEMBER_NAME) {
 		super();
 		VIDEO_UUID = vIDEO_UUID;
 		VIDEO_OWNER = vIDEO_OWNER;
@@ -24,6 +33,7 @@ public class VideoEntity {
 		VIDEO_DATE = vIDEO_DATE;
 		VIDEO_VIEWS = vIDEO_VIEWS;
 		VIDEO_INTRO = vIDEO_INTRO;
+		MEMBER_NAME = mEMBER_NAME;
 	}
 	
 	public String getVIDEO_UUID() {

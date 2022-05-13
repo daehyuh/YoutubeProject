@@ -7,13 +7,11 @@ public class MainEntity {
 	String VIDEO_NAME;
 	int VIDEO_VIEWS;
 	String VIDEO_DATE;
+	String MEMBER_ID;
 	
-	public MainEntity() {
-		super();
-	}
-	
-	public MainEntity(String vIDEO_UUID, String vIDEO_DIR, String mEMBER_NAME,
-			String vIDEO_NAME, int vIDEO_VIEWS, String vIDEO_DATE) {
+
+		public MainEntity(String vIDEO_UUID, String vIDEO_DIR, String mEMBER_NAME,
+			String vIDEO_NAME, int vIDEO_VIEWS, String vIDEO_DATE, String mEMBER_ID) {
 		super();
 		VIDEO_UUID = vIDEO_UUID;
 		VIDEO_DIR = vIDEO_DIR;
@@ -21,7 +19,18 @@ public class MainEntity {
 		VIDEO_NAME = vIDEO_NAME;
 		VIDEO_VIEWS = vIDEO_VIEWS;
 		VIDEO_DATE = vIDEO_DATE;
+		MEMBER_ID = mEMBER_ID;
 	}
+		
+	public String getMEMBER_ID() {
+		return MEMBER_ID;
+	}
+
+	public void setMEMBER_ID(String mEMBER_ID) {
+		MEMBER_ID = mEMBER_ID;
+	}
+
+
 
 	public String getVIDEO_UUID() {
 		return VIDEO_UUID;
