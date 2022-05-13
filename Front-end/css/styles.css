@@ -815,14 +815,25 @@ h1 {
 }
 .input_button input[type="reset"]{
   padding: 2px 12px;
-  background-color: gray;
+  background-color: ghostwhite;
+}
+.input_button input[type="reset"]:hover{
+  background-color: whitesmoke;
+}
+.input_button input[type="reset"]:active{
+  font-size: 13px;
 }
 .input_button input[type="button"]{
   padding: 2px 12px;
   margin-left: 3px;
-  background-color: darkgray;
+  background-color: gainsboro;
 }
-
+.input_button input[type="button"]:hover{
+  background-color: #999;
+}
+.input_button input[type="button"]:active{
+  font-size: 13px;
+}
 .comments{
   height: auto;
   width: 100%;
