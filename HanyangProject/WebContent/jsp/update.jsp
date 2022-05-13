@@ -97,7 +97,7 @@
 				</div>
 
 				<div class="inputBox">
-					<input type="text" id="sampleId3" name="user_pwd"
+					<input type="text" id="sampleId3" name="user_name"
 						placeholder="비밀번호"> <label>이름</label>
 				</div>
 
