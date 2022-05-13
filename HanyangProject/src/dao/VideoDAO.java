@@ -13,7 +13,7 @@ public class VideoDAO {
 
 		List<VideoEntity> list = new ArrayList<VideoEntity>();
 
-		String sql = "SELECT V.*, M.MEMBER_NAME FROM YTC_VIDEO V INNER JOIN YTC_MEMBER M ON V.VIDEO_OWNER = M.MEMBER_ID WHERE V.VIDEO_OWNER = '"+uuid+"'";
+		String sql = "SELECT V.*, M.MEMBER_NAME FROM YTC_VIDEO V INNER JOIN YTC_MEMBER M ON V.VIDEO_OWNER = M.MEMBER_ID WHERE V.VIDEO_UUID = '"+uuid+"'";
 
 		try {
 

@@ -34,15 +34,15 @@ public class Video2 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uuid = request.getParameter("video_uuid");
+		String uuid = request.getParameter("uuid");
 		System.out.println(uuid);
 		List<VideoEntity> Videolist = new ArrayList<VideoEntity>();
 		Videolist = VideoDAO.VideoSelectAllByuuId(uuid);
 		
-		request.setAttribute("Video", Videolist);
-		
+		request.setAttribute("Video2", Videolist);
+
 		ServletContext context = getServletContext();
-		RequestDispatcher dispatcher = context.getRequestDispatcher("/jsp/video.jsp");
+		RequestDispatcher dispatcher = context.getRequestDispatcher("/jsp/video2.jsp");
 		dispatcher.forward(request, response);
 	}
 
