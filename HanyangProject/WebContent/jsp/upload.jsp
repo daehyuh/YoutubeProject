@@ -109,12 +109,12 @@
 						
 						<div class="file_name">
 							<div>제목</div>
-							<textarea name="video_name" rows="" cols=""></textarea>
+							<textarea rows="" cols=""></textarea>
 						</div>
 
 						<div class="file_name">
 							<div>내용</div>
-							<textarea name="video_intro" rows="" cols=""></textarea>
+							<textarea rows="" cols=""></textarea>
 						</div>
 
 						<input type="hidden" name="video_owner" value="1212"> <input

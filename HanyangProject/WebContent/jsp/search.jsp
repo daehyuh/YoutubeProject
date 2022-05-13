@@ -67,8 +67,9 @@
 		</div>
 		
 		<div class="header__icons">
-			<i class="material-icons">videocam</i> <i class="material-icons"
-				onclick="test()">apps</i> <i class="material-icons">notifications</i>
+			<i class="material-icons">videocam</i>
+			<i class="material-icons" onclick="test()">apps</i>
+			<i class="material-icons">notifications</i>
 			<i class="material-icons display-this" onclick="test2()">account_circle</i>
 		</div>
 	</div>
@@ -89,16 +90,15 @@
 				<div class="serch__video">
 					<img class="search__video__image" src="/image/Banner1.jpg" alt="" />
 					<div class="">
-						<a class="channal__info__title" href="d"> <span
-							class="search__video__title"> <%=entity.getVIDEO_NAME()%>
-						</span>
+						<a class="channal__info__title" href="d">
+						<span class="search__video__title"> <%=entity.getVIDEO_NAME()%> </span>
 						</a>
 						<div>
 							<span>조회수 <%=entity.getVIDEO_VIEWS()%>회 • <%=entity.getVIDEO_DATE()%></span>
 						</div>
 						<div class="channal__info">
-							<img alt="" src="/image/Banner1.jpg"> <a
-								class="channal__info__text"
+							<img alt="" src="/image/Banner1.jpg"> 
+							<a class="channal__info__text"
 								href="https://daehyuh318.github.io/chanal/"> <span><%=entity.getMEMBER_NAME()%></span>
 							</a>
 						</div>

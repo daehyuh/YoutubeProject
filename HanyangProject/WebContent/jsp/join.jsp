@@ -79,7 +79,7 @@
 		<div class="outBox">
 			<form id="form">
 							<div class="inputBox">
-					<h1>회원가입</h1>
+					<h2>회원가입</h2>
 
 				</div>
 				<div class="inputBox">

@@ -16,11 +16,11 @@
 <link rel="stylesheet" href="/css/styles.css" />
 <title>대현이 뺨때리기</title>
 </head>
-<body class="white-theme" onload="onloadtheme();">
+<body class="white-theme">
 	<div class="header">
 
 		<div id="user" class="userhidden">
-		
+			
 			<% 
 			MemberEntity login = (MemberEntity)session.getAttribute("LOGIN");
 			%>
@@ -80,8 +80,35 @@
 		</div>
 	</div>
 
-	<div class="mainBody">
-		<div class="videos">
+    <div class="manager_page">
+
+      <div class="manager_info_box">
+        <div class="manager_info_profile">
+
+          <div class="manager_info_img">
+            <img src="/image/다리우스.jpg" width="110" height="90">
+          </div>
+
+          <div class="manager_info_user">
+              <div class="user_info">
+
+                <div class="user_titleSubscribe">
+                  <span style="font-size: 24px;">강대주</span> <br>
+                  <span>구독자 3.18억명</span>
+                </div>
+                
+                <div class="user_subscribeButton">
+                  <input type="button" value="채널" onclick="location.replace('');">
+                  <input type="button" value="업로드" onclick="location.href='upload.jsp?id=<%=request.getParameter("member_id")%>';">
+                </div>
+
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mainBody">
+        <div class="videos">
 			<div class="videos__container">
 				<%
 				List<MainEntity> list = new ArrayList<MainEntity>();
@@ -110,16 +137,13 @@
 				
 				<%
 				}
-				}else{%>
-				<script type="text/javascript">
-					location.href = '../';
-				</script>
-				<%	
 				}
 				%>
 			</div>
-		</div>
-	</div>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>
 

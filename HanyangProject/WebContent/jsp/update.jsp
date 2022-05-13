@@ -82,14 +82,13 @@
 		<div class="outBox">
 			<form name="form" method="post" action="/LOGIN">
 				<div class="inputBox">
-					<h1>회원 정보 수정</h1>
+					<h2>회원 정보 수정</h2>
 
 				</div>
 				
 				<div class="inputBox">
 					<input type="text" id="sampleId" name="user_id" placeholder="아이디"
-						value="<%=request.getParameter("member_id")%>" readonly="readonly">
-
+						value="<%=login.getMEMBER_ID()%>" readonly="readonly">
 				</div>
 
 				<div class="inputBox">
