@@ -80,7 +80,7 @@
 
 	<div class="mainBody">
 		<div class="outBox">
-			<form name="form" method="post" action="/LOGIN">
+			<form name="form" method="post" action="/Update">
 				<div class="inputBox">
 					<h2>회원 정보 수정</h2>
 
@@ -92,13 +92,13 @@
 				</div>
 
 				<div class="inputBox">
-					<input type="text" id="sampleId2" name="user_pwd"
+					<input type="text" id="sampleId2" name="user_pw"
 						placeholder="비밀번호"> <label>비밀번호</label>
 				</div>
 
 				<div class="inputBox">
 					<input type="text" id="sampleId3" name="user_name"
-						placeholder="비밀번호"> <label>이름</label>
+						placeholder="이름"> <label>이름</label>
 				</div>
 
 				<div class="btn-group">

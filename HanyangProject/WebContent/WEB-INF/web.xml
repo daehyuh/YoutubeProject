@@ -14,4 +14,3 @@
     <param-value>/WEB-INF/log4j2.xml</param-value>
   </context-param>
 </web-app>
-

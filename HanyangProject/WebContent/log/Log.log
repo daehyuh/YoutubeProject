@@ -1,0 +1,23 @@
+2022-05-13 14:31:17,016 INFO  [http-nio-8090-exec-2] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect| Path : DBConn
+2022-05-13 14:31:17,146 INFO  [http-nio-8090-exec-2] servlet.Log (Log.java:52) - [DEBUG] V_UUID : 272f081ac9714951b4a4ae9a0b1d8095 | V_DIR : E:/School/HanyangProject/HanyangProject/WebContent/video/ | M_NAME : 1212 | V_NAME : ooipoijsipogjiaopgpoi | V_NAME : ooipoijsipogjiaopgpoi | V_VIEWS : 0 | V_DATE : 2022-05-13| Path : MainPageDAO
+2022-05-13 14:31:17,146 INFO  [http-nio-8090-exec-2] servlet.Log (Log.java:52) - [DEBUG] V_UUID : 628138a927ee4224bce3515fbe6a8ac8 | V_DIR : E:/School/HanyangProject/HanyangProject/WebContent/video/ | M_NAME : 1212 | V_NAME : sadf | V_NAME : sadf | V_VIEWS : 0 | V_DATE : 2022-05-13| Path : MainPageDAO
+2022-05-13 14:31:33,306 INFO  [http-nio-8090-exec-6] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect| Path : DBConn
+2022-05-13 14:31:33,309 INFO  [http-nio-8090-exec-6] servlet.Log (Log.java:52) - [DEBUG] ID : user| PW : pwd| NAME : name| DATE : 2022-05-13| Path : MemberDAO
+2022-05-13 14:31:33,309 INFO  [http-nio-8090-exec-6] servlet.Log (Log.java:12) - [INFO] Login Succcess| Path : LOGIN
+2022-05-13 14:31:33,348 INFO  [http-nio-8090-exec-8] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect| Path : DBConn
+2022-05-13 14:31:33,350 INFO  [http-nio-8090-exec-8] servlet.Log (Log.java:52) - [DEBUG] V_UUID : 272f081ac9714951b4a4ae9a0b1d8095 | V_DIR : E:/School/HanyangProject/HanyangProject/WebContent/video/ | M_NAME : 1212 | V_NAME : ooipoijsipogjiaopgpoi | V_NAME : ooipoijsipogjiaopgpoi | V_VIEWS : 0 | V_DATE : 2022-05-13| Path : MainPageDAO
+2022-05-13 14:31:33,351 INFO  [http-nio-8090-exec-8] servlet.Log (Log.java:52) - [DEBUG] V_UUID : 628138a927ee4224bce3515fbe6a8ac8 | V_DIR : E:/School/HanyangProject/HanyangProject/WebContent/video/ | M_NAME : 1212 | V_NAME : sadf | V_NAME : sadf | V_VIEWS : 0 | V_DATE : 2022-05-13| Path : MainPageDAO
+2022-05-13 14:31:46,003 INFO  [http-nio-8090-exec-10] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect| Path : DBConn
+2022-05-13 14:31:46,005 INFO  [http-nio-8090-exec-10] servlet.Log (Log.java:52) - [DEBUG] ID : user | PW : null | NAME : user| Path : MemberDAO
+2022-05-13 14:31:46,008 INFO  [http-nio-8090-exec-10] servlet.Log (Log.java:12) - [INFO] Update Data| Path : MemberDAO
+2022-05-13 14:31:46,008 INFO  [http-nio-8090-exec-10] servlet.Log (Log.java:12) - [INFO] Update Success| Path : Update
+2022-05-13 14:31:47,415 INFO  [http-nio-8090-exec-2] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect| Path : DBConn
+2022-05-13 14:31:47,418 INFO  [http-nio-8090-exec-2] servlet.Log (Log.java:52) - [DEBUG] V_UUID : 272f081ac9714951b4a4ae9a0b1d8095 | V_DIR : E:/School/HanyangProject/HanyangProject/WebContent/video/ | M_NAME : 1212 | V_NAME : ooipoijsipogjiaopgpoi | V_NAME : ooipoijsipogjiaopgpoi | V_VIEWS : 0 | V_DATE : 2022-05-13| Path : MainPageDAO
+2022-05-13 14:31:47,418 INFO  [http-nio-8090-exec-2] servlet.Log (Log.java:52) - [DEBUG] V_UUID : 628138a927ee4224bce3515fbe6a8ac8 | V_DIR : E:/School/HanyangProject/HanyangProject/WebContent/video/ | M_NAME : 1212 | V_NAME : sadf | V_NAME : sadf | V_VIEWS : 0 | V_DATE : 2022-05-13| Path : MainPageDAO
+2022-05-13 14:32:25,114 INFO  [http-nio-8090-exec-3] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect| Path : DBConn
+2022-05-13 14:32:25,119 INFO  [http-nio-8090-exec-3] servlet.Log (Log.java:52) - [DEBUG] ID : user | PW : user | NAME : user| Path : MemberDAO
+2022-05-13 14:32:25,121 INFO  [http-nio-8090-exec-3] servlet.Log (Log.java:12) - [INFO] Update Data| Path : MemberDAO
+2022-05-13 14:32:25,121 INFO  [http-nio-8090-exec-3] servlet.Log (Log.java:12) - [INFO] Update Success| Path : Update
+2022-05-13 14:32:26,672 INFO  [http-nio-8090-exec-6] servlet.Log (Log.java:52) - [DEBUG] DataBase Connect| Path : DBConn
+2022-05-13 14:32:26,674 INFO  [http-nio-8090-exec-6] servlet.Log (Log.java:52) - [DEBUG] V_UUID : 272f081ac9714951b4a4ae9a0b1d8095 | V_DIR : E:/School/HanyangProject/HanyangProject/WebContent/video/ | M_NAME : 1212 | V_NAME : ooipoijsipogjiaopgpoi | V_NAME : ooipoijsipogjiaopgpoi | V_VIEWS : 0 | V_DATE : 2022-05-13| Path : MainPageDAO
+2022-05-13 14:32:26,674 INFO  [http-nio-8090-exec-6] servlet.Log (Log.java:52) - [DEBUG] V_UUID : 628138a927ee4224bce3515fbe6a8ac8 | V_DIR : E:/School/HanyangProject/HanyangProject/WebContent/video/ | M_NAME : 1212 | V_NAME : sadf | V_NAME : sadf | V_VIEWS : 0 | V_DATE : 2022-05-13| Path : MainPageDAO

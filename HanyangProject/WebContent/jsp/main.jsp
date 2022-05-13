@@ -92,11 +92,11 @@
 				%>
 				<div class="video">
 					<div class="video__thumbnail">
-						<img src="<%=entity.getDir()+entity.getUUID()%>.mp4" alt="" />
+						<img src="<%=entity.getVIDEO_DIR()+entity.getVIDEO_UUID() %>.mp4" alt="" />
 					</div>
 					<div class="video__details">
 						<div class="author">
-							<img src="<%=entity.getDir()+entity.getUUID()%>.png" alt="" />
+							<img src="<%=entity.getVIDEO_DIR()+entity.getVIDEO_UUID() %>.png" alt="" />
 						</div>
 						<div class="title">
 							<h3><%=entity.getVIDEO_NAME()%></h3>

@@ -11,7 +11,7 @@
         </Console>
         
         <!-- 파일 저장 방식 -->
-        <File name="file" fileName="C:/Users/DB프로그래밍/Desktop/직박구리/HanyangProject/Project/WebContent/log/${logNm}.log">
+        <File name="file" fileName="E:/School/HanyangProject/HanyangProject/WebContent/log/${logNm}.log">
               <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
         </File>
     </Appenders>

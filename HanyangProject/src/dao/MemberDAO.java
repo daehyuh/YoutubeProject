@@ -42,4 +42,20 @@ public class MemberDAO {
 
 		return entity;
 	}
+	
+	public static void MemberUpdateById(String id, String pw, String name){
+		DBConn dbcon = new DBConn();
+		MemberEntity entity = new MemberEntity(id, pw, name);
+		Log.DEBUGLOG("ID : " + entity.getMEMBER_ID() + " | PW : " + entity.getMEMBER_PW() + " | NAME : " + entity.getMEMBER_NAME(), "MemberDAO");
+		
+		String sql = "UPDATE YTC_MEMBER SET MEMBER_PW = '"+entity.getMEMBER_PW()+"', MEMBER_NAME = '"+entity.getMEMBER_NAME()+"' WHERE MEMBER_ID = '"+entity.getMEMBER_ID()+"'";
+		
+		try{
+			dbcon.stmt.executeUpdate(sql);
+			Log.INFOLOG("Update Data", "MemberDAO");
+		} catch (Exception e){
+			e.printStackTrace();
+			Log.ERRORLOG("Data Not Update", "MemberDAO");
+		}
+	}
 }
