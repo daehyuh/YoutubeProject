@@ -8,6 +8,7 @@ public class SearchEntity {
 	String VIDEO_INTRO;
 	String VIDEO_DATE;
 	String VIDEO_UUID;
+	String VIDEO_DIR;
 	
 	public SearchEntity() {
 		super();
@@ -15,7 +16,7 @@ public class SearchEntity {
 	
 	public SearchEntity(String mEMBER_ID, String mEMBER_NAME,
 			String vIDEO_NAME, int vIDEO_VIEWS, String vIDEO_INTRO,
-			String vIDEO_DATE, String vIDEO_UUID) {
+			String vIDEO_DATE, String vIDEO_UUID, String vIDEO_DIR) {
 		super();
 		MEMBER_ID = mEMBER_ID;
 		MEMBER_NAME = mEMBER_NAME;
@@ -24,6 +25,7 @@ public class SearchEntity {
 		VIDEO_INTRO = vIDEO_INTRO;
 		VIDEO_DATE = vIDEO_DATE;
 		VIDEO_UUID = vIDEO_UUID;
+		VIDEO_DIR = vIDEO_DIR;
 	}
 	
 	public String getMEMBER_ID() {
@@ -69,6 +71,11 @@ public class SearchEntity {
 	public void seVIDEO_UUID(String vIDEO_UUID) {
 		VIDEO_UUID = vIDEO_UUID;
 	}
-	
+	public String getVIDEO_DIR() {
+		return VIDEO_DIR;
+	}
+	public void seVIDEO_DIR(String vIDEO_DIR) {
+		VIDEO_DIR = vIDEO_DIR;
+	}
 	
 }
