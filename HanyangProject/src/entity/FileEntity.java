@@ -10,17 +10,35 @@ public class FileEntity {
 	int video_view;
 	String video_intro;
 	
-	public FileEntity(String video_uuid,String video_owner,String video_name,String video_dir,String video_data,int video_view,String video_intro) {
+	
+	
+	public FileEntity(String video_uuid, String video_owner, String video_name,
+			String video_dir, String video_data, int video_view,
+			String video_intro) {
 		super();
 		this.video_uuid = video_uuid;
-		this.video_owner = video_uuid;
+		this.video_owner = video_owner;
 		this.video_name = video_name;
 		this.video_dir = video_dir;
-		this.video_data = video_uuid;
+		this.video_data = video_data;
 		this.video_view = video_view;
 		this.video_intro = video_intro;
 	}
 	
+	public FileEntity(String video_uuid, String video_owner, String video_name,
+			String video_dir, String video_intro) {
+		super();
+		this.video_uuid = video_uuid;
+		this.video_owner = video_owner;
+		this.video_name = video_name;
+		this.video_dir = video_dir;
+		this.video_intro = video_intro;
+	}
+
+	public FileEntity() {
+		super();
+	}
+
 	public String getVideo_uuid() {
 		return video_uuid;
 	}

@@ -1,21 +1,44 @@
 package entity;
 
 public class MainEntity {
+	String VIDEO_UUID;
+	String VIDEO_DIR;
 	String MEMBER_NAME;
 	String VIDEO_NAME;
 	int VIDEO_VIEWS;
 	String VIDEO_DATE;
-	public MainEntity(String mEMBER_NAME, String vIDEO_NAME, int vIDEO_VIEWS,
-			String vIDEO_DATE) {
+	
+	public MainEntity() {
 		super();
+	}
+	
+	public MainEntity(String vIDEO_UUID, String vIDEO_DIR, String mEMBER_NAME,
+			String vIDEO_NAME, int vIDEO_VIEWS, String vIDEO_DATE) {
+		super();
+		VIDEO_UUID = vIDEO_UUID;
+		VIDEO_DIR = vIDEO_DIR;
 		MEMBER_NAME = mEMBER_NAME;
 		VIDEO_NAME = vIDEO_NAME;
 		VIDEO_VIEWS = vIDEO_VIEWS;
 		VIDEO_DATE = vIDEO_DATE;
 	}
-	public MainEntity() {
-		super();
+
+	public String getVIDEO_UUID() {
+		return VIDEO_UUID;
 	}
+
+	public void setVIDEO_UUID(String vIDEO_UUID) {
+		VIDEO_UUID = vIDEO_UUID;
+	}
+
+	public String getVIDEO_DIR() {
+		return VIDEO_DIR;
+	}
+
+	public void setVIDEO_DIR(String vIDEO_DIR) {
+		VIDEO_DIR = vIDEO_DIR;
+	}
+
 	public String getMEMBER_NAME() {
 		return MEMBER_NAME;
 	}

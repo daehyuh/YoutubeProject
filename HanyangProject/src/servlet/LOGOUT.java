@@ -37,7 +37,7 @@ public class LOGOUT extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<script>");
 		out.println("alert('로그아웃했습니다.');");
-		out.println("location.href='/jsp/main.jsp");
+		out.println("location.href='/jsp/main.jsp';");
 		out.println("</script>");
 	}
 

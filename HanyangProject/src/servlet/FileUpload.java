@@ -22,11 +22,9 @@ import dao.MemberDAO;
  * Servlet implementation class FileUpload
  */
 @WebServlet("/FileUpload")
-@MultipartConfig(
-		maxFileSize =-1,
-		location ="C:\\test4 - 복사본\\src\\main\\webapp\\temp\\",
-		fileSizeThreshold=1024
-		)
+@MultipartConfig(maxFileSize = 1024 * 1024 * 12, 
+	location = "E:/School/HanyangProject/HanyangProject/WebContent/temp", 
+	fileSizeThreshold = 1024 * 1024 * 512)
 public class FileUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -51,27 +49,29 @@ public class FileUpload extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("UTF-8");
+		
 		Part part = request.getPart("file");
 		Part part2 = request.getPart("file2");
 		String owner = request.getParameter("video_owner");
 		String name = request.getParameter("video_name");
 		String intro = request.getParameter("video_intro");
 		
-		owner = "1212";
+		/*owner = "1212";
 		name = "테스트1";
-		intro = "테스트1";
+		intro = "테스트1";*/
 		
 		
 		
-		String dir = "C:\\test4 - 복사본\\src\\main\\webapp\\file\\";
+		String dir = "E:/School/HanyangProject/HanyangProject/WebContent/video/";
 		String uniqueFileName = UUID.randomUUID().toString().replace("-", "");
 		try {
 			part.write(dir + uniqueFileName+".mp4");
-			part2.write(dir + uniqueFileName+".png");
+			//part2.write(dir + uniqueFileName+".png");
 			System.out.println(dir + uniqueFileName+".mp4");
-			System.out.println(dir + uniqueFileName+".png");
+			//System.out.println(dir + uniqueFileName+".png");
 			
-			MemberDAO.UploadFile(uniqueFileName, owner, dir, name, intro);
+			FileDAO.UploadFile(uniqueFileName, owner, dir, name, intro);
 			
 			
 			response.setCharacterEncoding("UTF-8");
@@ -98,7 +98,7 @@ public class FileUpload extends HttpServlet {
 	}
 
 	
-    private String getFilename(Part part){
+/*    private String getFilename(Part part){
         String fileName = "";        
         String header = part.getHeader("content-disposition");
         //part.getHeader :form-data; name="theFile";
@@ -106,12 +106,12 @@ public class FileUpload extends HttpServlet {
         String [] elements = header.split(";");
        
         for(String element : elements){
-            /*System.out.println("서브스트링 전:" +element);*/
+            System.out.println("서브스트링 전:" +element);
             fileName = element.substring(element.indexOf('=')+1);
-            /*System.out.println("트림 전:"+fileName);*/
-            fileName = fileName.trim().replace("\"",""); // " <- 쌍따옴표 지움
-            /*System.out.println("트림 후:"+fileName);*/
+            System.out.println("트림 전:"+fileName);
+            fileName = fileName.trim().replace("/","-"); // " <- 쌍따옴표 지움
+            System.out.println("트림 후:"+fileName);
         }        
         return fileName;        
-    }
+    }*/
 }

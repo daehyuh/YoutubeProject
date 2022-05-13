@@ -11,7 +11,7 @@ public class MainPageDAO {
 		List<MainEntity> list = new ArrayList<MainEntity>();
 		DBConn dbcon = new DBConn();
 		
-		String sql = "SELECT M.MEMBER_NAME, V.VIDEO_NAME, V.VIDEO_VIEWS, V.VIDEO_DATE FROM YTC_MEMBER M INNER JOIN YTC_VIDEO V ON M.MEMBER_ID = V.VIDEO_OWNER";
+		String sql = "SELECT V.VIDEO_UUID, V.VIDEO_DIR, M.MEMBER_NAME, V.VIDEO_NAME, V.VIDEO_VIEWS, V.VIDEO_DATE FROM YTC_MEMBER M INNER JOIN YTC_VIDEO V ON M.MEMBER_ID = V.VIDEO_OWNER";
 		
 		
 		try {
@@ -21,15 +21,19 @@ public class MainPageDAO {
 			while(dbcon.rs.next()){
 				MainEntity entity = new MainEntity(
 						dbcon.rs.getString(1),
-						dbcon.rs.getString(2), 
-						dbcon.rs.getInt(3), 
-						dbcon.rs.getString(4)
+						dbcon.rs.getString(2),  
+						dbcon.rs.getString(3),
+						dbcon.rs.getString(4),
+						dbcon.rs.getInt(5), 
+						dbcon.rs.getString(6)
 						);
-				Log.DEBUGLOG("M_NAME : " 
-						+ entity.getMEMBER_NAME() + "| V_NAME : " 
-						+ entity.getVIDEO_NAME() + "| V_NAME : " 
-						+ entity.getVIDEO_NAME() + "| V_VIEWS : " 
-						+ entity.getVIDEO_VIEWS() + "| V_DATE : " 
+				Log.DEBUGLOG("V_UUID : " 
+						+ entity.getVIDEO_UUID() + " | V_DIR : "
+						+ entity.getVIDEO_DIR() + " | M_NAME : " 
+						+ entity.getMEMBER_NAME() + " | V_NAME : " 
+						+ entity.getVIDEO_NAME() + " | V_NAME : " 
+						+ entity.getVIDEO_NAME() + " | V_VIEWS : " 
+						+ entity.getVIDEO_VIEWS() + " | V_DATE : " 
 						+ entity.getVIDEO_DATE(), "MainPageDAO");
 				list.add(entity);
 			}
