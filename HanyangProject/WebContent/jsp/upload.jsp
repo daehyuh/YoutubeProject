@@ -15,44 +15,41 @@
 <title>대현이 뺨때리기</title>
 </head>
 <body class="white-theme">
-<!-- 헤더 바 -->
+	<!-- 헤더 바 -->
 	<div class="header">
 
+		<!-- user 바 -->
 		<div id="user" class="userhidden">
-		
-			<% 
-			MemberEntity login = (MemberEntity)session.getAttribute("LOGIN");
-			%>
 
 			<%
-			if (login == null) {
+				MemberEntity login = (MemberEntity) session.getAttribute("LOGIN");
 			%>
 
+
+			<%
+				if (login == null) {
+			%>
 			<a href="/jsp/login.jsp">
 				<div class="user-content">로그인</div>
 			</a> <a href="/jsp/join.jsp">
 				<div class="user-content">회원가입</div>
 			</a>
 			<%
-			} else {
+				} else {
 			%>
-			<a href ="/Video?member_id=<%=login.getMEMBER_ID()%>&member_name=<%=login.getMEMBER_NAME()%>">
-				<div class="user-content">마이페이지</div>
-			</a> 
 			<a href="/jsp/update.jsp">
 				<div class="user-content">회원수정</div>
-			</a> 
-			<a onclick="location.href='/LOGOUT'";>
+			</a> <a onclick="location.href='/LOGOUT'";>
 				<div class="user-content">로그아웃</div>
 			</a>
 			<%
-			}
+				}
 			%>
 			<div id="themeinfo" class="user-content" onclick="test()">디자인 :
 				밝은테마</div>
 
 		</div>
-
+		<!-- user 바 -->
 
 
 		<div class="header__left">
@@ -72,13 +69,12 @@
 		</div>
 
 		<div class="header__icons">
-			<i class="material-icons">videocam</i> 
-			<i class="material-icons" onclick="test()">apps</i>
-			<i class="material-icons">notifications</i>
+			<i class="material-icons">videocam</i> <i class="material-icons"
+				onclick="test()">apps</i> <i class="material-icons">notifications</i>
 			<i class="material-icons display-this" onclick="test2()">account_circle</i>
 		</div>
 	</div>
-<!-- 헤더 바 -->
+	<!-- 헤더 바 -->
 
 
 	<div class="mainBody">
@@ -105,25 +101,26 @@
 					<form method="post" enctype="multipart/form-data"
 						action="/FileUpload">
 
-						<input type="file" name="file" id="file" accept=".mp4"
-							onchange="fileCheck()"> <input type="file" name="file2"
-							id="file2" accept=".png" onchange="fileCheck2()">
-
+						<input type="file" name="file" id="file" / accept=".mp4"
+							onchange="fileCheck()">
+						
+						<input type="file" name="file2" id="file2" / accept=".png"
+							onchange="fileCheck2()">
+						
 						<div class="file_name">
 							<div>제목</div>
 							<textarea rows="" cols=""></textarea>
 						</div>
 
-						<div class="file_intro">
+						<div class="file_name">
 							<div>내용</div>
 							<textarea rows="" cols=""></textarea>
 						</div>
 
-						<input type="hidden" name="video_owner"
-							value="<%=login.getMEMBER_ID()%>"> 
-							<input class="uploadSubmit" type="submit" value="업로드">
+						<input type="hidden" name="video_owner" value="1212"> <input
+							class="uploadSubmit" type="submit" value="업로드">
 					</form>
-
+					
 					<div class="uploadInfo">
 
 						<div id="filePath">
@@ -137,7 +134,7 @@
 						<div id="fileSize">
 							영상 파일 크기<br>
 						</div>
-
+						
 						<div id="filePath2">
 							썸네일 파일 경로<br>
 						</div>
@@ -149,7 +146,7 @@
 						<div id="fileSize2">
 							썸네일 파일 크기<br>
 						</div>
-
+						
 					</div>
 
 				</div>

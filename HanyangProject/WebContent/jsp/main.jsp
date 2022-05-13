@@ -17,7 +17,6 @@
 <title>대현이 뺨때리기</title>
 </head>
 <body class="white-theme" onload="onloadtheme();">
-<!-- 헤더 바 -->
 	<div class="header">
 
 		<div id="user" class="userhidden">
@@ -38,10 +37,10 @@
 			<%
 			} else {
 			%>
-			<a href ="/Video?member_id=<%=login.getMEMBER_ID()%>&member_name=<%=login.getMEMBER_NAME()%>">
+			<a href="/jsp/video.jsp?member_id=<%=login.getMEMBER_ID()%>">
 				<div class="user-content">마이페이지</div>
 			</a> 
-			<a href="/jsp/update.jsp">
+			<a href="/jsp/update.jsp?member_id=<%=login.getMEMBER_ID()%>">
 				<div class="user-content">회원수정</div>
 			</a> 
 			<a onclick="location.href='/LOGOUT'";>
@@ -80,7 +79,6 @@
 			<i class="material-icons display-this" onclick="test2()">account_circle</i>
 		</div>
 	</div>
-<!-- 헤더 바 -->
 
 	<div class="mainBody">
 		<div class="videos">
@@ -92,20 +90,19 @@
 					for (int i = 0; i < list.size(); i++) {
 						MainEntity entity = list.get(i);
 				%>
-				<div class="video" onclick="location.href = '/Video2?uuid=<%=entity.getVIDEO_UUID()%>'">
+				<div class="video">
 					<div class="video__thumbnail">
-						<img src="/file/<%=entity.getVIDEO_UUID()%>.png" alt="" />
+						<img src="<%=entity.getDir()+entity.getUUID()%>.mp4" alt="" />
 					</div>
 					<div class="video__details">
 						<div class="author">
-						<a href="/Video?member_id=<%=entity.getMEMBER_ID()%>&member_name=<%=entity.getMEMBER_NAME()%>">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/User_icon-cp.svg/1200px-User_icon-cp.svg.png" alt="" />
-						</a>
+							<img src="<%=entity.getDir()+entity.getUUID()%>.png" alt="" />
 						</div>
 						<div class="title">
 							<h3><%=entity.getVIDEO_NAME()%></h3>
-							<a href="/Video?member_id=<%=entity.getMEMBER_ID()%>&member_name=<%=entity.getMEMBER_NAME()%>"><%=entity.getMEMBER_NAME()%></a>
+							<a href="/jsp/video?member_id=<%=entity.getVIDEO_NAME()%>/"><%=entity.getMEMBER_NAME()%></a>
 							<span>조회수 <%=entity.getVIDEO_VIEWS()%>회 • <%=entity.getVIDEO_DATE()%>
+								전
 							</span>
 						</div>
 					</div>
