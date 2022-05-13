@@ -17,6 +17,7 @@
 <title>대현이 뺨때리기</title>
 </head>
 <body class="white-theme" onload="onloadtheme();">
+<!-- 헤더 바 -->
 	<div class="header">
 
 		<div id="user" class="userhidden">
@@ -37,7 +38,7 @@
 			<%
 			} else {
 			%>
-			<a href="/jsp/video.jsp?member_id=<%=login.getMEMBER_ID()%>&member_name=<%=login.getMEMBER_NAME()%>">
+			<a href ="/Video?member_id=<%=login.getMEMBER_ID()%>&member_name=<%=login.getMEMBER_NAME()%>">
 				<div class="user-content">마이페이지</div>
 			</a> 
 			<a href="/jsp/update.jsp">
@@ -79,6 +80,7 @@
 			<i class="material-icons display-this" onclick="test2()">account_circle</i>
 		</div>
 	</div>
+<!-- 헤더 바 -->
 
 	<div class="mainBody">
 		<div class="videos">

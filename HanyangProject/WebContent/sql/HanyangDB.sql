@@ -1,8 +1,6 @@
--- CREATE DATABASE
-
 CREATE DATABASE IF NOT EXISTS HANYANG CHARACTER SET = 'utf8' COLLATE = 'utf8_general_ci';
 
-USE haynang
+USE haynang;
 
 -- CREATE TABLE
 
@@ -44,6 +42,8 @@ CREATE TABLE IF NOT EXISTS YTC_RECOMMENT (
 )ENGINE = InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 
+
+
 --------------------------------------------
 
 -- 예제 데이터들
@@ -55,29 +55,3 @@ INSERT INTO YTC_VIDEO VALUES('uuuuuu', 'user', 'E:/School/HanyangProject/Hanyang
 INSERT INTO YTC_VIDEO VALUES('uiuiuiui', '12', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uiuiuiui', NOW(), 10, '456asdf456adsf');
 INSERT INTO YTC_VIDEO VALUES('udududud', 'qwer', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'udududud', NOW(), 100, '123zxczxc123');
 INSERT INTO YTC_VIDEO VALUES('uuididuuuuidid', '123', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uuididuuuuidid', NOW(), 1000, '1234qwer1234qwer');
-
--- mac 예제 데이터
-
-INSERT INTO YTC_VIDEO VALUES('uuid', 'user', '/Users/hanseok/Documents/Python/OpenCVPractice/video', 'uuid', NOW(), 1, 'qwieorasdkfjnzxmcnv');
-
-SELECT 
-    M.MEMBER_ID, 
-    M.MEMBER_NAME, 
-    V.VIDEO_NAME,
-    V.VIDEO_VIEWS, 
-    V.VIDEO_INTRO, 
-    V.VIDEO_DATE 
-FROM 
-    YTC_MEMBER M 
-INNER JOIN 
-    YTC_VIDEO V 
-ON 
-    M.MEMBER_ID
-    = 
-    V.VIDEO_OWNER
-WHERE 
-    V.VIDEO_NAME 
-LIKE 
-    '%id%';
-
-select * from ytc_video where video_name like '%id%'

@@ -39,7 +39,7 @@
 			<%
 			} else {
 			%>
-			<a href="/jsp/video.jsp?member_id=<%=login.getMEMBER_ID()%>">
+			<a href ="/Video?member_id=<%=login.getMEMBER_ID()%>&member_name=<%=login.getMEMBER_NAME()%>">
 				<div class="user-content">마이페이지</div>
 			</a> 
 			<a href="/jsp/update.jsp">

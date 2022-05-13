@@ -16,20 +16,19 @@
 <title>대현이 뺨때리기</title>
 </head>
 <body class="white-theme" onload="onloadtheme()">
-	<!-- 헤더 바 -->
+<!-- 헤더 바 -->
 	<div class="header">
 
-		<!-- user 바 -->
 		<div id="user" class="userhidden">
-
-			<%
-			MemberEntity login = (MemberEntity) session.getAttribute("LOGIN");
+		
+			<% 
+			MemberEntity login = (MemberEntity)session.getAttribute("LOGIN");
 			%>
-
 
 			<%
 			if (login == null) {
 			%>
+
 			<a href="/jsp/login.jsp">
 				<div class="user-content">로그인</div>
 			</a> <a href="/jsp/join.jsp">
@@ -38,9 +37,13 @@
 			<%
 			} else {
 			%>
+			<a href ="/Video?member_id=<%=login.getMEMBER_ID()%>&member_name=<%=login.getMEMBER_NAME()%>">
+				<div class="user-content">마이페이지</div>
+			</a> 
 			<a href="/jsp/update.jsp">
 				<div class="user-content">회원수정</div>
-			</a> <a onclick="location.href='/LOGOUT'";>
+			</a> 
+			<a onclick="location.href='/LOGOUT'";>
 				<div class="user-content">로그아웃</div>
 			</a>
 			<%
@@ -50,7 +53,7 @@
 				밝은테마</div>
 
 		</div>
-		<!-- user 바 -->
+
 
 
 		<div class="header__left">
@@ -70,13 +73,13 @@
 		</div>
 
 		<div class="header__icons">
-			<i class="material-icons">videocam</i> <i class="material-icons"
-				onclick="test()">apps</i> <i class="material-icons">notifications</i>
+			<i class="material-icons">videocam</i> 
+			<i class="material-icons" onclick="test()">apps</i>
+			<i class="material-icons">notifications</i>
 			<i class="material-icons display-this" onclick="test2()">account_circle</i>
 		</div>
 	</div>
-	<!-- 헤더 바 -->
-
+<!-- 헤더 바 -->
 
 	<div class="mainBody">
 		<div class="outBox">
