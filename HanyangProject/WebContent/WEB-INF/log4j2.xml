@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
-	<Appenders>
-		<Console name="STDOUT" target="SYSTEM_OUT">
-			<PatternLayout
-				pattern="%d{YYYY-MM-DD HH:mm:ss} %-5p [%t] %C{2} (%F:%L) - %m%n" />
-		</Console>
-		<File name="file"
-			fileName="C:/Users/DB프로그래밍/Desktop/logtest/log.log">
-			<PatternLayout
-				pattern="%d{YYYY-MM-DD HH:mm:ss} %-5p [%t] %C{2} (%F:%L) - %m%n" />
-		</File>
-	</Appenders>
-	<Loggers>
-		<Logger name="log" level="trace" additivity='false'>
-			<AppenderRef ref="STDOUT"/>
-			<AppenderRef ref="file"/>
-		</Logger>
-	</Loggers>
+<Properties>
+  <Property name="logNm">Log</Property>
+</Properties>
+    <!-- 로그 출력 방식 -->
+    <Appenders>
+        <!-- 콘솔 출력 방식 -->
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
+        </Console>
+        
+        <!-- 파일 저장 방식 -->
+        <File name="file" fileName="C:/Users/DB프로그래밍/Desktop/직박구리/HanyangProject/Project/WebContent/log/${logNm}.log">
+              <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+        </File>
+    </Appenders>
+    
+    <Loggers>
+        <!-- one 패키지의 'andTwo 클래스의 로그 레벨은 info로 올리고', file로 저장할래 -->
+        <!-- additivity는 같은 로그가 있다면 additivity가 설정되어있는 로거에서만 출력하도로 설정하는거야.
+        참고로 모든 로거에는 기본 로그가 남는데 아래처럼 따로 설정한 로그 방식을 AppenderRef 해준다면 기본 로그+Append 로그. 총 2개의 로그가 남아.
+        기본로그는 최소의 정보만 들어있기때문에 이를 막아야겠지? 로그 자체는 동일하기때문에 additivity를 false로 해 주면 기본로그는 뜨지 않을거야. -->
+        <Logger name = "servlet"  level="info" additivity = 'false'>
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="file"/>
+        </Logger>
+        <Logger name = "dao"  level="debug" additivity = 'false'>
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="file"/>
+        </Logger>
+        <Logger name = "entity"  level="info" additivity = 'false'>
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="file"/>
+        </Logger>
+    </Loggers>
 </Configuration>

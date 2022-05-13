@@ -91,7 +91,7 @@
 						placeholder="비밀번호"> <label>비밀번호</label>
 				</div>
 				<div class="btn-group">
-				<input type="button" class="join-btn" value="회원가입" onclick="location.href = 'jsp/join.jsp'">
+				<input type="button" class="join-btn" value="회원가입" onclick="location.href = '/jsp/join.jsp'">
 					<input type="submit" class="login-btn" value="로그인">
 				</div>
 			</form>
