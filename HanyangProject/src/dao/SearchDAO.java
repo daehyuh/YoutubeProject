@@ -19,6 +19,7 @@ public class SearchDAO {
                 "V.VIDEO_VIEWS, " +
                 "V.VIDEO_INTRO, " +
                 "V.VIDEO_DATE " +
+		"V.VIDEO_UUID " +
             "FROM " +
                 "YTC_MEMBER M " +
             "INNER JOIN " +
@@ -44,7 +45,8 @@ public class SearchDAO {
 						dbcon.rs.getString(3), 
 						dbcon.rs.getInt(4), 
 						dbcon.rs.getString(5), 
-						dbcon.rs.getString(6) 
+						dbcon.rs.getString(6),
+						dbcon.rs.getString(7)
 						);
 				Log.DEBUGLOG("M_ID : " 
 						+ entity.getMEMBER_ID()+ "| M_NAME : " 
@@ -52,7 +54,8 @@ public class SearchDAO {
 						+ entity.getVIDEO_NAME() + "| V_VIEWS : " 
 						+ entity.getVIDEO_VIEWS() + "| V_INTRO : " 
 						+ entity.getVIDEO_INTRO() + "| V_DATE : " 
-						+ entity.getVIDEO_DATE(), "SearchDAO");
+						+ entity.getVIDEO_DATE() + "| V_UUID : " 
+						+ entity.getVIDEO_UUID(), "SearchDAO");
 				list.add(entity);
 			}
 		} catch (Exception e){
