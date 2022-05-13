@@ -46,20 +46,3 @@ function check(){
 	
 }
 
-var comment_flag = true;
-
-function hidden_comment(){
-    var hiddenComment = document.getElementById("hidden_comment");
-    if (comment_flag == true){
-        if (hiddenComment.style.display == "none"){
-            hiddenComment.style.display = "block";
-            comment_flag = false;
-        }
-    }
-    else if (comment_flag == false){
-        if (hiddenComment.style.display == "block"){
-            hiddenComment.style.display = "none";
-            comment_flag = true;
-        } 
-    }
-}
