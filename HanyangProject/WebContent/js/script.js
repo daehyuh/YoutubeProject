@@ -1,4 +1,4 @@
-function onloadtheme(){
+function onloadTheme(){
 	const storedTheme = localStorage.getItem("darkTheme");
     if (storedTheme === "true") {
         document.body.classList.replace('white-theme', 'dark-theme');
@@ -6,7 +6,7 @@ function onloadtheme(){
     }
 }
 
-function test(){
+function changeTheme(){
 
 	if ( document.body.classList.contains('white-theme') ){
 		 document.body.classList.replace('white-theme', 'dark-theme');
@@ -96,10 +96,9 @@ function fileCheck() {
 				//파일 크기
 				var fileSize = file.files[0].size;
 				
-				
-				document.getElementById("filePath").innerHTML = "파일 경로<br>" + filePath;
-				document.getElementById("fileName").innerHTML = "파일 이름<br>" + fileName;
-				document.getElementById("fileSize").innerHTML = "파일 크기<br>" + fileSize;
+			
+				document.getElementById("fileName").value = filePathSplit[filePathLength-1];
+
 			
 			}
 			
@@ -122,8 +121,11 @@ function fileCheck2() {
 				var fileSize = file.files[0].size;
 				
 				
-				document.getElementById("filePath2").innerHTML = "썸네일 파일 경로<br>" + filePath;
-				document.getElementById("fileName2").innerHTML = "썸네일 파일 이름<br>" + fileName;
-				document.getElementById("fileSize2").innerHTML = "썸네일 파일 크기<br>" + fileSize;
+				document.getElementById("fileName2").value = filePathSplit[filePathLength-1];
+
 			
 			}
+			
+			
+			
+			

@@ -25,9 +25,9 @@ body.white-theme{
   --scroll-color: #606060;
   --scroll-hover-color: #909090;
 	
-  --container-border-color: #606060;
-  --container-border-hover-color: #717171;
-  --container-border-focus-color: #3ea6ff;
+  --container-border-color: #999999;
+  --container-border-hover-color: #999999;
+  --container-border-focus-color: #999999;
   
   --header__search: hsl(0, 0%, 100%);
   --header__search_board: #ccc;
@@ -54,9 +54,9 @@ body.dark-theme{
   --user-hover-background: #373737;
   --user-click-background: #4f4f4f;
   
-  --container-border-color: #606060;
-  --container-border-hover-color: #717171;
-  --container-border-focus-color: #3ea6ff;
+  --container-border-color: #999999;
+  --container-border-hover-color: #999999;
+  --container-border-focus-color: #999999;
   
   --header__search: hsl(0, 0%, 7%);
   --header__search_board: hsl(0, 0%, 18.82%);
@@ -153,6 +153,7 @@ body.dark-theme{
   max-height: 694px;
   border: 1px solid var(--video-color-2);
   border-top: none;
+  z-index: 1;
 }
 
 .userhidden {
@@ -322,8 +323,7 @@ hr {
 }
 
 .title {
-  display: flex;
-  flex-direction: column;
+
 }
 
 .title h3 {
@@ -340,7 +340,7 @@ span {
   font-size: 14px;
 }
 
-h1 {
+h2 {
   font-size: 20px;
   margin-bottom: 10px;
   color: var(--h1-color)
@@ -616,7 +616,7 @@ h1 {
 .upload{
 	margin: auto;
 	width: 700px;
-	height: 500px;
+	height: auto;
 	background: white;
     align-items: center;
     border-radius: 8px;
@@ -627,17 +627,9 @@ h1 {
 	height: 15%;
 	display: flex;
     align-items: center;
-    padding-left: 24px;
-    padding-right: 16px;
-    border-bottom:1px solid var(--video-color);
+    padding:20px;
 }
 
-.title-title{
-
-}
-.title-x{
-
-}
 
 .fileSel{
 width: 50%;
@@ -646,21 +638,63 @@ border: 1px soild blue;
 }
 
 .uploadMain{
-	display:flex;
 	margin-top: 20px;
 	margin-right: 10%;
 	margin-left: 10%;
 	
 }
 
+.filebox {
+	margin: 5px;
+}
+
+.filebox .upload-name {
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    width: 70%;
+    color: #999999;
+}
+
+.filebox label {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    width: 30px
+    height: 40px;
+    margin-left: 10px;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
 .file_name{
-margin-top: 50px;
 width: 100%;
-height: 100px;
+height: 80px;
+border: 1px solid var(--container-border-color);
+border-radius: 4px;
+}
+.file_intro{
+width: 100%;
+height: 200px;
 border: 1px solid var(--container-border-color);
 border-radius: 4px;
 }
 
+.topmargin{
+	margin-top: 40px;
+}
 .file_name:hover {
 border: 1px solid var(--container-border-hover-color);	
 border-radius: 4px;
@@ -671,13 +705,14 @@ border: 1px solid var(--container-border-focus-color);
 border-radius: 4px;
 }
 
-.file_name>textarea{
+.file_name >textarea,.file_intro >textarea{
 	border: none;
 	width: 100%;
-	height: 60%;
+	height: 100%;
 	outline: none;
 	resize: none;
-	overflow:hidden
+	overflow:hidden;
+	font-size: 20px;
 }
 
 textarea:focus {
@@ -685,8 +720,7 @@ textarea:focus {
 }
 
 .uploadInfo{
-	margin-left: 20px;
-	width: 100%;
+	width: 30%;
 	
 	background: var(--container-border-focus-color);
 }
@@ -694,11 +728,13 @@ textarea:focus {
 .uploadSubmit{
 	float: right;
 	margin-top : 20px;
+	margin-bottom : 20px;
 	width: 40%;
-	height: 10%;	
-	background: #3ea5fe;
+	height: 50px;	
+	background: #999999;
 	color: white;
 	border: none;
+	font-size: 20px;
 }
 
 /* 업로드 */
@@ -1049,6 +1085,19 @@ textarea:focus {
 }
 
 /*희건이*/
+
+#error-page{
+    text-align: center;
+    height: 100%;
+    white-space: nowrap;
+    word-break: normal;	
+    
+}
+#error-page-content{
+    vertical-align: middle;
+    display: inline-block;
+}
+
 
 @media (min-width: 1920px) {
   .header__search {
