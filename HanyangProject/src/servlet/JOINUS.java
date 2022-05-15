@@ -59,7 +59,7 @@ public class JOINUS extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
 			out.println("alert('회원가입 성공.');");
-			out.println("location.href='/'");
+			out.println("location.href='/index.jsp'");
 			out.println("</script>");
 			out.close();
 		} catch (Exception e) {

@@ -87,7 +87,7 @@ public class FileUpload extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			out.print("<script>");
 			out.print("alert('파일 업로드 오류.');");
-			out.print("location.href='/jsp/main.jsp';");
+			out.print("location.href='/index.jsp';");
 			out.print("</script>");
 			out.close();	
 		}

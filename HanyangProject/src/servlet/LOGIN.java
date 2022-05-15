@@ -67,7 +67,7 @@ public class LOGIN extends HttpServlet {
 					
 					ServletContext context = getServletContext();
 					RequestDispatcher dispatcher = context
-							.getRequestDispatcher("/jsp/main.jsp");
+							.getRequestDispatcher("/index.jsp");
 					dispatcher.forward(request, response);
 				} else { // 패스워드 틀림					
 					Log.INFOLOG("Password Not Match", path);

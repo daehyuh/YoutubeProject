@@ -1,5 +1,6 @@
 package dao;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,11 +11,13 @@ public class MainPageDAO {
 	public static List<MainEntity> MainPageAllSelect() {
 		List<MainEntity> list = new ArrayList<MainEntity>();
 		DBConn dbcon = new DBConn();
-		
+
+
 		String sql = "SELECT V.VIDEO_UUID, V.VIDEO_DIR, M.MEMBER_NAME, V.VIDEO_NAME, V.VIDEO_VIEWS, V.VIDEO_DATE, M.member_id FROM YTC_MEMBER M INNER JOIN YTC_VIDEO V ON M.MEMBER_ID = V.VIDEO_OWNER";
 		
 		System.out.println(sql);
 		try {
+
 			dbcon.rs = dbcon.stmt.executeQuery(sql);
 			Log.TRACELOG("SELECT MainPageAll Data", "MainPageDAO");
 			

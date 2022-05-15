@@ -1,5 +1,7 @@
 package servlet;
 
+import java.net.InetAddress;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -49,7 +51,12 @@ public class Log {
 	public static void DEBUGLOG(String text, String path){
 		
 		if(!text.isEmpty()){
-			logger.info("[DEBUG] " + text + "| Path : " + path);
+			try {
+				InetAddress ip = InetAddress.getLocalHost();			
+				logger.info("[DEBUG] " + text + ip + "| Path : " + path);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
 		} else {
 			logger.error("[ERROR] No Text | Path : " + path);
 		}

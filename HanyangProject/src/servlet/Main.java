@@ -40,6 +40,9 @@ public class Main extends HttpServlet {
 		
 		request.setAttribute("Main", Mainlist);
 
+		
+		
+		
 		ServletContext context = getServletContext();
 		RequestDispatcher dispatcher = context.getRequestDispatcher("/jsp/main.jsp");
 		dispatcher.forward(request, response);
@@ -52,5 +55,6 @@ public class Main extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
+	
 
 }
