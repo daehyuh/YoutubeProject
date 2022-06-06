@@ -52,13 +52,13 @@
 						
 						<div class="topmargin">영상 제목
 						<div class="file_name">
-							<textarea rows="" cols=""></textarea>
+							<textarea rows="" cols="" name="video_name"></textarea>
 						</div>
 						</div>
 						
 						<div class="topmargin">영상 내용
 						<div class="file_intro">
-							<textarea rows="" cols=""></textarea>
+							<textarea rows="" cols="" name="video_intro"></textarea>
 						</div>
 						</div>
 						
