@@ -11,7 +11,7 @@ public class FileDAO {
 		FileEntity entity = new FileEntity(uuid, owner, name, dir, intro);
 
 		String sql = "INSERT INTO YTC_VIDEO VALUES('" + entity.getVideo_uuid() + "', '" + entity.getVideo_owner() + "', '" + entity.getVideo_dir() + "', '" + entity.getVideo_name()
-				+ "', now(), 0, '" + entity.getVideo_intro() +"')";
+				+ "', now(), 0, '" + entity.getVideo_intro() +"', 0)";
 		
 		Log.DEBUGLOG("uuid : " + entity.getVideo_uuid() + " | owner : " + entity.getVideo_owner() + " | \n dir : " + entity.getVideo_dir() + " | \n name : " + entity.getVideo_name() + " | intro : " + entity.getVideo_intro(), "FileDAO");
 		
