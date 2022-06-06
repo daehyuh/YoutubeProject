@@ -48,11 +48,11 @@ CREATE TABLE IF NOT EXISTS YTC_RECOMMENT (
 --------------------------------------------
 
 -- 예제 데이터들
-INSERT INTO YTC_VIDEO VALUES('uuid', 'user', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uuid', NOW(), 1, 'qweqweasdasd');
-INSERT INTO YTC_VIDEO VALUES('ididid', '12', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'ididid', NOW(), 10, 'asdasdsadasd');
-INSERT INTO YTC_VIDEO VALUES('idid', 'qwer', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'idid', NOW(), 100, 'zxczxczxczxc');
-INSERT INTO YTC_VIDEO VALUES('uu', '123', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uu', NOW(), 1000, 'qweasdzcxqweasdzxc');
-INSERT INTO YTC_VIDEO VALUES('uuuuuu', 'user', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uuuuuu', NOW(), 1, '123asd123asd');
-INSERT INTO YTC_VIDEO VALUES('uiuiuiui', '12', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uiuiuiui', NOW(), 10, '456asdf456adsf');
-INSERT INTO YTC_VIDEO VALUES('udududud', 'qwer', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'udududud', NOW(), 100, '123zxczxc123');
-INSERT INTO YTC_VIDEO VALUES('uuididuuuuidid', '123', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uuididuuuuidid', NOW(), 1000, '1234qwer1234qwer');
+INSERT INTO YTC_VIDEO VALUES('uuid', 'user', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uuid', NOW(), 1, 'qweqweasdasd', 0);
+INSERT INTO YTC_VIDEO VALUES('ididid', '12', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'ididid', NOW(), 10, 'asdasdsadasd', 0);
+INSERT INTO YTC_VIDEO VALUES('idid', 'qwer', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'idid', NOW(), 100, 'zxczxczxczxc', 0);
+INSERT INTO YTC_VIDEO VALUES('uu', '123', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uu', NOW(), 1000, 'qweasdzcxqweasdzxc', 0);
+INSERT INTO YTC_VIDEO VALUES('uuuuuu', 'user', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uuuuuu', NOW(), 1, '123asd123asd', 0);
+INSERT INTO YTC_VIDEO VALUES('uiuiuiui', '12', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uiuiuiui', NOW(), 10, '456asdf456adsf', 0);
+INSERT INTO YTC_VIDEO VALUES('udududud', 'qwer', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'udududud', NOW(), 100, '123zxczxc123', 0);
+INSERT INTO YTC_VIDEO VALUES('uuididuuuuidid', '123', 'E:/School/HanyangProject/HanyangProject/WebContent/video', 'uuididuuuuidid', NOW(), 1000, '1234qwer1234qwer', 0);
