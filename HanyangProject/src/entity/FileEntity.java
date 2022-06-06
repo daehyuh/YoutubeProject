@@ -9,12 +9,10 @@ public class FileEntity {
 	String video_data;
 	int video_view;
 	String video_intro;
-	
-	
-	
-	public FileEntity(String video_uuid, String video_owner, String video_name,
-			String video_dir, String video_data, int video_view,
-			String video_intro) {
+	int video_check_image;
+
+	public FileEntity(String video_uuid, String video_owner, String video_name, String video_dir, String video_data,
+			int video_view, String video_intro, int video_check_image) {
 		super();
 		this.video_uuid = video_uuid;
 		this.video_owner = video_owner;
@@ -23,8 +21,9 @@ public class FileEntity {
 		this.video_data = video_data;
 		this.video_view = video_view;
 		this.video_intro = video_intro;
+		this.video_check_image = video_check_image;
 	}
-	
+
 	public FileEntity(String video_uuid, String video_owner, String video_name,
 			String video_dir, String video_intro) {
 		super();
@@ -80,6 +79,13 @@ public class FileEntity {
 	}
 	public void setVideo_intro(String video_intro) {
 		this.video_intro = video_intro;
+	}
+	public int getVideo_check_image() {
+		return video_check_image;
+	}
+
+	public void setVideo_check_image(int video_check_image) {
+		this.video_check_image = video_check_image;
 	}
 	
 }
