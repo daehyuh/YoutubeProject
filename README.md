@@ -19,7 +19,7 @@
 
 
 # ERD
-![erdpic](https://user-images.githubusercontent.com/56254170/167562883-9c37ecac-d6af-461d-a510-7a2d1e6bc369.png)
+![erdpic](https://user-images.githubusercontent.com/56254170/172180162-12d15bec-5e81-4d0c-8c73-b04cee8c859b.png)
 
 Link: [Hanyang](https://daehyuh318.github.io/HanyangProject/Front-end/ "깃헙 페이지") |
 Link: [github](https://github.com/daehyuh318/HanyangProject "깃헙 페이지")
@@ -27,5 +27,5 @@ Link: [github](https://github.com/daehyuh318/HanyangProject "깃헙 페이지")
 
 
 
-
 # 5월 14일 1.0 버전 완성
+
