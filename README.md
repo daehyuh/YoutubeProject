@@ -5,7 +5,7 @@
 
 > > ## Back-end 백 엔드 파일 
 > > ## Front-end 프론트 엔드 파일 
-> > ## HanyangProject 백엔드 프론트 엔드 합친 파일 
+> > ## HanyangProject 프로젝트 파일
 
 
 
